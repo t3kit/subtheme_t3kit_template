@@ -11,7 +11,7 @@
 ########################################################################
 
 $EM_CONF[$_EXTKEY] = array(
-    'title' => 'Theme t3kit template',
+    'title' => 'Subtheme t3kit template',
     'description' => 'TBD',
     'category' => 'templates',
     'shy' => 0,
