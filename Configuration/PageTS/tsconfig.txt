@@ -1,0 +1,8 @@
+# theme_t3kit
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Configuration/PageTS/tsconfig.txt">
+
+# subtheme_t3kit_template
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:subtheme_t3kit_template/Configuration/FluidStyledContent" extensions="pagets">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:subtheme_t3kit_template/Configuration/ContentElements" extensions="pagets">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:subtheme_t3kit_template/Configuration/GridElements/PageTS" extensions="pagets">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:subtheme_t3kit_template/Configuration/PageTS/iconFonts.pagets">

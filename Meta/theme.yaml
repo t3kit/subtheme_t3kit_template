@@ -1,0 +1,21 @@
+# Name and description of the theme (required)
+title            : t3kit Subtheme template
+version          : 0.0.1
+description      :  |
+  Start new subtheme based on t3kit project.
+
+parentTheme:
+  name: theme_t3kit
+
+# Keywords (optional)
+keywords:
+  - t3kit
+  - theme
+  - subtheme
+  - responsive design
+
+# Screenshots for the preview gallery (optional, multiple possible)
+screenshots:
+  -
+    file           : EXT:subtheme_t3kit_template/Meta/Screenshots/screenshot.png
+    caption        : Subtheme t3kit

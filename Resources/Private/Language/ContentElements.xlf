@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" product-name="subtheme_t3kit_template">
+		<header/>
+		<body>
+			<trans-unit id="element.settings">
+				<source>Additional settings</source>
+			</trans-unit>
+
+			<trans-unit id="newElement.title">
+				<source>New Element</source>
+			</trans-unit>
+			<trans-unit id="newElement.description">
+				<source>New Element example</source>
+			</trans-unit>
+			<trans-unit id="newElement.textType">
+				<source>Element text style</source>
+			</trans-unit>
+			<trans-unit id="newElement.showHeader">
+				<source>Show header</source>
+			</trans-unit>
+
+		</body>
+	</file>
+	</xliff>

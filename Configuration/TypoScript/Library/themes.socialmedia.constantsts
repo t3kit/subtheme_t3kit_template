@@ -1,0 +1,20 @@
+# All constants are copied from Theme_t3kit specifically for easily adding changes. Just uncomment needed constant and add your changes.
+
+
+# Show/Hide
+# themes.configuration.socialmedia.useFacebook = Show
+# themes.configuration.socialmedia.facebookLink = https://www.facebook.com/typo3
+# themes.configuration.socialmedia.useTwitter = Show
+# themes.configuration.socialmedia.twitterLink = https://twitter.com/typo3
+# themes.configuration.socialmedia.useLinkedIn = Show
+# themes.configuration.socialmedia.linkedInLink = https://www.linkedin.com/company/typo3-association
+# themes.configuration.socialmedia.useVimeo = Show
+# themes.configuration.socialmedia.vimeoLink = https://vimeo.com/135225809
+# themes.configuration.socialmedia.useGooglePlus = Show
+# themes.configuration.socialmedia.googlePlusLink = https://plus.google.com/communities/104410053692531620800
+# themes.configuration.socialmedia.usePinterest = Show
+# themes.configuration.socialmedia.pinterestLink = https://www.pinterest.com/VisitSwedenDE/malm%C3%B6/
+# themes.configuration.socialmedia.useInstagram = Show
+# themes.configuration.socialmedia.instagramLink = https://instagram.com/explore/tags/typo3/
+# themes.configuration.socialmedia.useYoutube = Show
+# themes.configuration.socialmedia.youtubeLink = https://www.youtube.com/user/typo3/

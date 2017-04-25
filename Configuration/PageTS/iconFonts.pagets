@@ -1,0 +1,23 @@
+TCEFORM.pages.tx_themes_icon.iconClass {
+    config {
+        cssFile = EXT:subtheme_t3kit_template/Resources/Public/IconFonts/style.css
+    }
+}
+
+TCEFORM.tt_content.pi_flexform.iconTextButton.sDEF.iconClass {
+    config {
+        cssFile = EXT:subtheme_t3kit_template/Resources/Public/IconFonts/style.css
+    }
+}
+
+TCEFORM.tt_content.pi_flexform.bigIconTextButton.sDEF.iconClass {
+    config {
+        cssFile = EXT:subtheme_t3kit_template/Resources/Public/IconFonts/style.css
+    }
+}
+
+TCEFORM.tt_content.pi_flexform.div.sDEF.iconClass {
+    config {
+        cssFile = EXT:subtheme_t3kit_template/Resources/Public/IconFonts/style.css
+    }
+}

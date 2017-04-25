@@ -1,0 +1,22 @@
+mod.wizards.newContentElement.wizardItems.contentElements {
+    elements {
+        newElement {
+            title = LLL:EXT:subtheme_t3kit_template/Resources/Private/Language/ContentElements.xlf:newElement.title
+            description = LLL:EXT:subtheme_t3kit_template/Resources/Private/Language/ContentElements.xlf:newElement.description
+            iconIdentifier = content-elements-newElement
+             tt_content_defValues {
+                CType = newElement
+            }
+        }
+    }
+    show := addToList(newElement)
+}
+
+# Flexform configuration
+
+TCEFORM.tt_content.pi_flexform.newElement.sDEF.textType {
+    addItems {
+        default = Default
+        lead = Lead text
+    }
+}

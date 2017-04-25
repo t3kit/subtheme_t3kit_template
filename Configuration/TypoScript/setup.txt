@@ -1,0 +1,13 @@
+# theme_t3kit
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Configuration/TypoScript/setup.txt">
+
+
+# subtheme_t3kit_template
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:subtheme_t3kit_template/Configuration/TypoScript/Library/" extensions="setupts">
+
+# Content elements
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:subtheme_t3kit_template/Configuration/ContentElements/" extensions="setupts">
+
+# Grid elements
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:subtheme_t3kit_template/Configuration/GridElements/TypoScript" extensions="setupts">
+

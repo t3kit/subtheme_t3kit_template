@@ -1,0 +1,3 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/TypoScript/Library" extensions="constantsts">
+
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:subtheme_t3kit_template/Configuration/TypoScript/Library" extensions="constantsts">

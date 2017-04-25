@@ -1,0 +1,54 @@
+# All constants are copied from Theme_t3kit specifically for easily adding changes. Just uncomment needed constant and add your changes.
+
+
+# Header Top
+#############################################
+# Show Header Top
+# themes.configuration.elem.status.showHeaderTop = 1
+# Show Header Top Contacts
+# themes.configuration.elem.status.showHeaderTopContacts = 1
+# Show Header Top LangMenu
+# themes.configuration.elem.status.showHeaderTopLangMenu = 0
+# Show Header Top Search
+# themes.configuration.elem.status.showHeaderTopSearch = 0
+# Show Header Main Menu Search
+# themes.configuration.elem.status.showHeaderMainMenuSearch = 0
+# Show Header Top Navigation
+# themes.configuration.elem.status.showHeaderTopNavigation = 1
+# Header Top Navigation Visible in mobile menu
+# themes.configuration.elem.status.headerTopNavigationVisibleInMobileMenu = 0
+# Header Top Navigation mobile menu as one item
+# themes.configuration.elem.status.headerTopNavigationAsOneItemInMobileMenu = 1
+# Header Top: Container pid where the menu items are located
+# themes.configuration.header.top.menu.containerPid = 6
+
+
+#Header Middle
+#############################################
+# Show Header Middle
+# themes.configuration.elem.status.showHeaderMiddle = 1
+# Show Header Middle Logo
+# themes.configuration.elem.status.showHeaderMiddleLogo = 1
+
+# Show Header Middle SocIcons
+# themes.configuration.elem.status.showHeaderMiddleSocIcons = 0
+
+# Show Header Middle Search
+# themes.configuration.elem.status.showHeaderMiddleSearch = 1
+
+
+# Header-Logo: Path and filename (fileadmin/.../logo.png)
+# themes.configuration.header.logo.main.file = fileadmin/example_content/images/logo.png
+
+# Startsite page uid
+# themes.configuration.pages.startsite = 1
+# Site Name
+# themes.configuration.siteName = t3kit
+
+
+
+#############################################
+# Header Templates
+#############################################
+# Header Template
+# themes.configuration.header.headerTemplate = Header

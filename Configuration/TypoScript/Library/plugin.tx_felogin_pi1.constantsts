@@ -1,0 +1,5 @@
+# All constants are copied from Theme_t3kit specifically for easily adding changes. Just uncomment needed constant and add your changes.
+
+
+# plugin.tx_felogin_pi1.redirectPageLogin = 112
+# plugin.tx_felogin_pi1.redirectPageLogout = 25

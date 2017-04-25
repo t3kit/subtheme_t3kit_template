@@ -1,0 +1,16 @@
+# All configurations are copied from Theme_t3kit specifically for easily adding changes. Just uncomment needed constant and add your changes.
+
+
+# plugin.tx_themes {
+#     view {
+#         templateRootPaths {
+#             2700 = EXT:theme_t3kit/Resources/Private/Templates/
+#         }
+#         partialRootPaths {
+#             2700 = EXT:theme_t3kit/Resources/Private/Partials/
+#         }
+#         layoutRootPaths {
+#             2700 = EXT:theme_t3kit/Resources/Private/Layouts/
+#         }
+#     }
+# }

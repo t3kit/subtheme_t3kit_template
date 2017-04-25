@@ -1,0 +1,38 @@
+# All constants are copied from Theme_t3kit specifically for easily adding changes. Just uncomment needed constant and add your changes.
+
+
+# Main Navigation
+#############################################
+# Main Menu: Exclude uid list (12,13,...)
+# themes.configuration.menu.main.excludeUidList =
+# Enable/Disable Main Menu Dropdown
+# [Main Menu Dropdown=_sub, Disable Main Menu Dropdown=no-dropdown]
+# themes.configuration.menu.main.dropdown = _sub
+# Enable/Disable Main Menu Dropdown Columns (only works if Main Menu Dropdown is enabled)
+# themes.configuration.menu.main.dropdownColumns = 0
+# Enable/Disable third navigation level
+# themes.configuration.menu.main.showThirdNavLevel = 0
+
+
+# Sub Menu
+#############################################
+# customsubcategory=menu_sub= Sub Menu
+# Menu sub: Exclude uid list (12,13,...)
+# themes.configuration.menu.sub.excludeUidList =
+# Menu sub: Include also items which are marked as 'include not in menu'
+# themes.configuration.menu.sub.includeNotInMenu = 0
+# Left column with sub-navigation under content on mobile
+# themes.configuration.menu.sub.underContentInMobile = 1
+
+
+# Menu breadcrumb
+#############################################
+# customsubcategory=menu_breadcrumb= Breadcrumbs
+# Menu breadcrumb: Include also items which are marked as 'include not in menu'
+# themes.configuration.menu.breadcrumb.includeNotInMenu = 0
+# Menu breadcrumb: Exclude uid list (12,13,...)
+# themes.configuration.menu.breadcrumb.excludeUidList =
+# Show breadcrumbs
+# themes.configuration.menu.breadcrumb.showBreadcrumbs = 1
+# Hide breadcrumbs in mobile
+# themes.configuration.menu.breadcrumb.hideBreadcrumbsInMobile = 1
