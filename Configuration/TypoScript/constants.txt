@@ -1,3 +1,5 @@
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:theme_t3kit/Configuration/TypoScript/Library" extensions="constantsts">
+# theme_t3kit
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:theme_t3kit/Configuration/TypoScript/constants.txt">
 
+# subtheme_t3kit_template
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:subtheme_t3kit_template/Configuration/TypoScript/Library" extensions="constantsts">
