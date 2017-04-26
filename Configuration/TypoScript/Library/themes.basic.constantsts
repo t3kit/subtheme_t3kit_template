@@ -38,13 +38,13 @@
 # FElayout mode (css/less/dev)
 # themes.configuration.feLayoutMode = less
 # Path to CSS/LESS files
-# themes.configuration.feLayoutPath = EXT:theme_t3kit/Resources/Public
+themes.configuration.feLayoutPath = EXT:subtheme_t3kit_template/Resources/Public
 
 # Custom CSS/LESS path
 # themes.configuration.customPath = fileadmin/custom
 
 # Icon Fonts Path
-# themes.configuration.iconFontsPath = EXT:theme_t3kit/Resources/Public/IconFonts
+themes.configuration.iconFontsPath = EXT:subtheme_t3kit_template/Resources/Public/IconFonts
 
 # themes.languages.default.isoCode = en_GB
 # themes.configuration.headerComment = This website is based on t3kit project by Pixelant - www.t3kit.com
