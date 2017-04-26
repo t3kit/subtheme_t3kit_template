@@ -1,19 +1,28 @@
 
+// theme_t3kit/felayout_t3kit
+// =======================================================
+
 // header
-@import 'main/header/header.js';
+@import '../../../../theme_t3kit/felayout_t3kit/dev/js/main/header/header.js';
 
 // elements
-@import 'main/contentElements/slider.js';
-@import 'main/contentElements/carousel.js';
-@import 'main/contentElements/parallax.js';
-@import 'main/contentElements/heroImage.js';
-@import 'main/contentElements/sliderContainer.js';
-@import 'main/contentElements/imageTextLink.js';
+@import '../../../../theme_t3kit/felayout_t3kit/dev/js/main/contentElements/slider.js';
+@import '../../../../theme_t3kit/felayout_t3kit/dev/js/main/contentElements/carousel.js';
+@import '../../../../theme_t3kit/felayout_t3kit/dev/js/main/contentElements/parallax.js';
+@import '../../../../theme_t3kit/felayout_t3kit/dev/js/main/contentElements/heroImage.js';
+@import '../../../../theme_t3kit/felayout_t3kit/dev/js/main/contentElements/sliderContainer.js';
+@import '../../../../theme_t3kit/felayout_t3kit/dev/js/main/contentElements/imageTextLink.js';
 
 // plugins
-@import 'main/plugins/news/newsCarousel.js';
-@import 'main/plugins/news/news.js';
+@import '../../../../theme_t3kit/felayout_t3kit/dev/js/main/plugins/news/newsCarousel.js';
+@import '../../../../theme_t3kit/felayout_t3kit/dev/js/main/plugins/news/news.js';
 
-@import 'main/suggest.js';
+@import '../../../../theme_t3kit/felayout_t3kit/dev/js/main/suggest.js';
 
+@import '../../../../theme_t3kit/felayout_t3kit/dev/js/main/general.js';
+
+
+
+// felayout
+// =======================================================
 @import 'main/general.js';
