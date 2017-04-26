@@ -1,3 +1,6 @@
+// Main JS are copied from theme_t3kit/felayout_t3kit extension to keep the possibility to fix bugs only in one place. But in the case of rewrite original JS scripts for some element/partial/plugin, please disable original JS file for this element in theme_t3kit/.../main.js and create the same file with your JS scripts keeping the same folder structure as it is on theme_t3kit/felayout_t3kit. With this approach, you will keep your code clear and easy to debug.
+//
+//
 
 // theme_t3kit/felayout_t3kit
 // =======================================================

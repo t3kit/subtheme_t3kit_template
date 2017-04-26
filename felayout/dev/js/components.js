@@ -1,3 +1,8 @@
+// By default, this extension uses standard components JS from theme_t3kit/felayout_t3kit, to keep the possibility to update components only in one place.
+// In case if you need to disable some component, just disable theme_t3kit/.../components.js and add needed plugins manually by uncommenting original or adding new to components.js.
+//
+//
+
 //==============================================================================
 // theme_t3kit/felayout_t3kit
 //==============================================================================
