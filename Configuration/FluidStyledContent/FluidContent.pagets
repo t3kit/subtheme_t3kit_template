@@ -1,2 +1,51 @@
-# All configurations are copied from Theme_t3kit specifically for easily adding changes. Just uncomment needed constant and add your changes.
+# ======================================================================
+# All configurations are copied from Theme_t3kit specifically for easily adding changes.
+# Just rename/add needed values
+# ======================================================================
+
+
+# Layout
+# Use layout field to customize Layout select-box for all content elements
+TCEFORM.tt_content.layout {
+    addItems {
+        100 = Example generic layout for all content
+    }
+}
+
+# Add an layout for specific content elements
+# Example:
+TCEFORM.tt_content.layout {
+    types {
+        imageTextLink {
+            addItems {
+                --div-- = ImageTextLink layouts:
+                110 = ImageTextLink test layout
+            }
+        }
+    }
+}
+
+
+
+
+# Add an appearance for all content elements
+TCEFORM.tt_content.frame_class {
+    addItems {
+        testall  = Test all
+    }
+}
+
+# Add an appearance for specific content elements
+# Example:
+TCEFORM.tt_content.frame_class {
+    types {
+        imageTextLink {
+            addItems {
+                --div-- = ImageTextLink appearance:
+                test = Test ImageTextLink
+            }
+        }
+    }
+}
+
 
