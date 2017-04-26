@@ -1,27 +1,28 @@
 @font-face {
   font-family: 'icons';
   src:
-    url('fonts/icons.ttf?nnbnns') format('truetype'),
-    url('fonts/icons.woff?nnbnns') format('woff'),
-    url('fonts/icons.svg?nnbnns#icons') format('svg');
+    url('fonts/icons.ttf?urtbau') format('truetype'),
+    url('fonts/icons.woff?urtbau') format('woff'),
+    url('fonts/icons.svg?urtbau#icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-.icon {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icons' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+.icons {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
 
 .icon-alarm:before {
   content: "\e900";
@@ -62,31 +63,31 @@
 .icon-cart:before {
   content: "\e915";
 }
-.icon-checkmark-circle2:before {
+.icon-checkmark-circle:before {
   content: "\e917";
 }
-.icon-chevron-down-circle2:before {
+.icon-chevron-down-circle:before {
   content: "\e918";
 }
-.icon-chevron-down2:before {
+.icon-chevron-down:before {
   content: "\e919";
 }
-.icon-chevron-left-circle2:before {
+.icon-chevron-left-circle:before {
   content: "\e91a";
 }
-.icon-chevron-left2:before {
+.icon-chevron-left:before {
   content: "\e91b";
 }
-.icon-chevron-right-circle2:before {
+.icon-chevron-right-circle:before {
   content: "\e91c";
 }
-.icon-chevron-right2:before {
+.icon-chevron-right:before {
   content: "\e91d";
 }
-.icon-chevron-up-circle2:before {
+.icon-chevron-up-circle:before {
   content: "\e91e";
 }
-.icon-chevron-up2:before {
+.icon-chevron-up:before {
   content: "\e91f";
 }
 .icon-circle-minus:before {
@@ -248,89 +249,11 @@
 .icon-unlink:before {
   content: "\e966";
 }
-.icon-user2:before {
+.icon-user:before {
   content: "\e967";
 }
-.icon-users2:before {
-  content: "\e968";
-}
-.icon-arrow-down-circle:before {
-  content: "\e902";
-}
-.icon-arrow-down2:before {
-  content: "\e903";
-}
-.icon-arrow-left-circle:before {
-  content: "\e904";
-}
-.icon-arrow-left:before {
-  content: "\e905";
-}
-.icon-arrow-right-circle:before {
-  content: "\e906";
-}
-.icon-arrow-right2:before {
-  content: "\e907";
-}
-.icon-arrow-up-circle:before {
-  content: "\e908";
-}
-.icon-arrow-up:before {
-  content: "\e909";
-}
-.icon-checkmark-circle:before {
-  content: "\e935";
-}
-.icon-chevron-down-circle:before {
-  content: "\e936";
-}
-.icon-chevron-down:before {
-  content: "\e938";
-}
-.icon-chevron-left-circle:before {
-  content: "\e939";
-}
-.icon-chevron-left:before {
-  content: "\e93e";
-}
-.icon-chevron-right-circle:before {
-  content: "\e944";
-}
-.icon-chevron-right:before {
-  content: "\e94c";
-}
-.icon-chevron-up-circle:before {
-  content: "\e94d";
-}
-.icon-chevron-up:before {
-  content: "\e94e";
-}
-.icon-star-empty:before {
-  content: "\e94f";
-}
-.icon-star-half:before {
-  content: "\e957";
-}
-.icon-star:before {
-  content: "\e95b";
-}
-.icon-store:before {
-  content: "\e95f";
-}
-.icon-strikethrough:before {
-  content: "\e960";
-}
-.icon-sun:before {
-  content: "\e969";
-}
-.icon-sync2:before {
-  content: "\e96a";
-}
-.icon-user:before {
-  content: "\e96b";
-}
 .icon-users:before {
-  content: "\e96c";
+  content: "\e968";
 }
 .icon-folder_open:before {
   content: "\e2c8";
@@ -383,13 +306,13 @@
 .icon-cross2:before {
   content: "\e661";
 }
-.icon-arrow-left2:before {
+.icon-arrow-left:before {
   content: "\e66e";
 }
 .icon-arrow-down:before {
   content: "\e66f";
 }
-.icon-arrow-up2:before {
+.icon-arrow-up:before {
   content: "\e670";
 }
 .icon-arrow-right:before {
