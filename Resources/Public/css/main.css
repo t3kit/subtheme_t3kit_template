@@ -1313,9 +1313,6 @@
     margin-top: 0;
   }
 }
-.fix-label {
-  padding-left: 20px;
-}
 .footer__subscribe .alert {
   width: 66%;
   clear: both;
@@ -4879,6 +4876,6 @@ div.awesomplete li[aria-selected="true"] mark {
 }
 h1,
 h2 {
-  font-family: 'Playfair Display', Garamond, "Times New Roman", serif;
+  font-family: 'Cormorant', Garamond, "Times New Roman", serif;
 }
 /*# sourceMappingURL=main.css.map */
