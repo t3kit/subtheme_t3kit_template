@@ -18,15 +18,15 @@ module.exports = {
           match: /<\/head>/i,
           fn: function (snippet, match) {
             return `
-                ${css('bootstrap.css')}
-                ${css('components.css')}
-                ${css('main.css')}
-                ${js('jquery.js')}
-                ${js('bootstrap.js')}
-                ${js('components.js')}
-                ${js('main.js')}
-                ${snippet}
-                ${match}
+              ${css('bootstrap.css')}
+              ${css('components.css')}
+              ${css('main.css')}
+              ${js('jquery.js')}
+              ${js('bootstrap.js')}
+              ${js('components.js')}
+              ${js('main.js')}
+              ${snippet}
+              ${match}
             `
           }
         }

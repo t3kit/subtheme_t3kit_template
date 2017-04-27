@@ -1,36 +1,36 @@
 <T3DataStructure>
 	<meta>
-			<langDisable>1</langDisable>
+		<langDisable>1</langDisable>
 	</meta>
 	<sheets>
-			<sDEF>
-					<ROOT>
-							<TCEforms>
-									<sheetTitle>LLL:EXT:subtheme_t3kit_template/Resources/Private/Language/ContentElements.xlf:element.settings</sheetTitle>
-							</TCEforms>
-							<type>array</type>
-							<el>
-								<textType>
-									<TCEforms>
-										<label>LLL:EXT:subtheme_t3kit_template/Resources/Private/Language/ContentElements.xlf:newElement.textType</label>
-										<config>
-											<type>select</type>
-												<items>
-												</items>
-										</config>
-									</TCEforms>
-								</textType>
-								<showHeader>
-									<TCEforms>
-										<label>LLL:EXT:subtheme_t3kit_template/Resources/Private/Language/ContentElements.xlf:newElement.showHeader</label>
-										<config>
-											<type>check</type>
-											<default>1</default>
-										</config>
-									</TCEforms>
-								</showHeader>
-							</el>
-					</ROOT>
-			</sDEF>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:subtheme_t3kit_template/Resources/Private/Language/ContentElements.xlf:element.settings</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<textType>
+						<TCEforms>
+							<label>LLL:EXT:subtheme_t3kit_template/Resources/Private/Language/ContentElements.xlf:newElement.textType</label>
+							<config>
+								<type>select</type>
+									<items>
+									</items>
+							</config>
+						</TCEforms>
+					</textType>
+					<showHeader>
+						<TCEforms>
+							<label>LLL:EXT:subtheme_t3kit_template/Resources/Private/Language/ContentElements.xlf:newElement.showHeader</label>
+							<config>
+								<type>check</type>
+								<default>1</default>
+							</config>
+						</TCEforms>
+					</showHeader>
+				</el>
+			</ROOT>
+		</sDEF>
 	</sheets>
 </T3DataStructure>
