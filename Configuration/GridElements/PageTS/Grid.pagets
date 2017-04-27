@@ -1,3 +1,31 @@
 # ======================================================================
 # All configurations are copied from Theme_t3kit specifically for easily adding changes.
+# Just rename/add needed values
 # ======================================================================
+
+
+# Use layout field to customize Layout select-box for Gridelements
+TCEFORM.tt_content.layout {
+    types {
+        gridelements_pi1 {
+            addItems {
+                --div-- = Gridelements layouts:
+                # Specific layout label for GridElements (Layout class => subtheme_t3kit_template/Configuration/GridElements/Grid.setupts)
+                601 = Super Grid layout
+            }
+        }
+    }
+}
+
+# Use frame_class field to customize appearance select-box for Gridelements
+# Note in this case the class is just taken from the item (className = Label)
+TCEFORM.tt_content.frame_class {
+   types {
+       gridelements_pi1 {
+           addItems {
+                --div-- = Gridelements appearance:
+                test-wrapper  = Grid test wrapper
+           }
+       }
+   }
+}

@@ -1,3 +1,35 @@
 # ======================================================================
 # All configurations are copied from Theme_t3kit specifically for easily adding changes.
+# Just rename/add needed values
 # ======================================================================
+
+
+# ====================================================
+# GridElements
+# ====================================================
+# lib.subthemeGrigClassMappings.800  < lib.contentElement.dataProcessing.800
+# lib.subthemeGrigClassMappings.800 {
+lib.contentElement.dataProcessing.800 {
+    classMappings {
+        # Specific layout class for GridElements (Layout label => subtheme_t3kit_template/Configuration/GridElements/PageTS/Grid.pagets)
+        601 = super-grid-layout
+    }
+}
+
+
+
+lib.gridelements.2ColumnGrid.cObject.dataProcessing.800 < lib.contentElement.dataProcessing.800
+lib.gridelements.3ColumnGrid.cObject.dataProcessing.800 < lib.contentElement.dataProcessing.800
+lib.gridelements.4ColumnGrid.cObject.dataProcessing.800 < lib.contentElement.dataProcessing.800
+lib.gridelements.Adv1ColumnGrid.cObject.dataProcessing.800 < lib.contentElement.dataProcessing.800
+lib.gridelements.Adv2ColumnGrid.cObject.dataProcessing.800 < lib.contentElement.dataProcessing.800
+lib.gridelements.Adv3ColumnGrid.cObject.dataProcessing.800 < lib.contentElement.dataProcessing.800
+lib.gridelements.Adv4ColumnGrid.cObject.dataProcessing.800 < lib.contentElement.dataProcessing.800
+
+tt_content.gridelements_pi1.20.10.setup.2ColumnGrid < lib.gridelements.2ColumnGrid
+tt_content.gridelements_pi1.20.10.setup.3ColumnGrid < lib.gridelements.3ColumnGrid
+tt_content.gridelements_pi1.20.10.setup.4ColumnGrid < lib.gridelements.4ColumnGrid
+tt_content.gridelements_pi1.20.10.setup.Adv1ColumnGrid < lib.gridelements.Adv1ColumnGrid
+tt_content.gridelements_pi1.20.10.setup.Adv2ColumnGrid < lib.gridelements.Adv2ColumnGrid
+tt_content.gridelements_pi1.20.10.setup.Adv3ColumnGrid < lib.gridelements.Adv3ColumnGrid
+tt_content.gridelements_pi1.20.10.setup.Adv4ColumnGrid < lib.gridelements.Adv4ColumnGrid
