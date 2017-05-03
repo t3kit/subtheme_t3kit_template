@@ -1,4 +1,11 @@
 
+#### v0.2.0 `May 3, 2017`
+
+:heavy_exclamation_mark:**Breaking Changes:**
+- **[!!!]** **[TASK]** use NPM instead of Bower as a main FE package manager ([6df9551](https://github.com/t3kit/subtheme_t3kit_template/commit/6df9551))
+
+***
+
 #### v0.1.0 `April 27, 2017`
 - **[BUGFIX]** fix socialmedia ts constants ([ef35a89](https://github.com/t3kit/subtheme_t3kit_template/commit/ef35a89))
 - **[TASK]** cleanup + .editorconfig fixes ([1072309](https://github.com/t3kit/subtheme_t3kit_template/commit/1072309))

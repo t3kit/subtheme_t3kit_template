@@ -1,6 +1,6 @@
 # Name and description of the theme (required)
 title            : Subtheme t3kit template
-version          : 0.1.0
+version          : 0.2.0
 description      :  |
   Start new subtheme based on t3kit project.
 
