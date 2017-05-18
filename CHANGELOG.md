@@ -1,4 +1,11 @@
 
+#### v0.3.0 `May 18, 2017`
+- **[BUGFIX]** fix felayout conf to work with TYPO3 subpages ([4fe8ddb](https://github.com/t3kit/subtheme_t3kit_template/commit/4fe8ddb))
+- **[TASK]** change @import paths for t3kit Appearance and Layout styling (css) ([fd4d722](https://github.com/t3kit/subtheme_t3kit_template/commit/fd4d722))
+- **[DOC]** update README file ([8570837](https://github.com/t3kit/subtheme_t3kit_template/commit/8570837))
+
+***
+
 #### v0.2.0 `May 3, 2017`
 
 :heavy_exclamation_mark:**Breaking Changes:**
