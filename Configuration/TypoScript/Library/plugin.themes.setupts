@@ -4,13 +4,13 @@
 # plugin.tx_themes {
 #     view {
 #         templateRootPaths {
-#             2700 = EXT:theme_t3kit/Resources/Private/Templates/
+#             2700 = EXT:subtheme_t3kit_template@!%/Resources/Private/Templates/
 #         }
 #         partialRootPaths {
-#             2700 = EXT:theme_t3kit/Resources/Private/Partials/
+#             2700 = EXT:subtheme_t3kit_template@!%/Resources/Private/Partials/
 #         }
 #         layoutRootPaths {
-#             2700 = EXT:theme_t3kit/Resources/Private/Layouts/
+#             2700 = EXT:subtheme_t3kit_template@!%/Resources/Private/Layouts/
 #         }
 #     }
 # }

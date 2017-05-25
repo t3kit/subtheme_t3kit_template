@@ -2,7 +2,7 @@
 title            : Subtheme t3kit template
 version          : 0.3.0
 description      :  |
-  Start new subtheme based on t3kit project.
+  subtheme_t3kit_template based on t3kit project.
 
 parentTheme:
   name: theme_t3kit
@@ -18,4 +18,5 @@ keywords:
 screenshots:
   -
     file           : EXT:subtheme_t3kit_template/Meta/Screenshots/screenshot.png
-    caption        : Subtheme t3kit
+    caption        : Subtheme t3kit template
+

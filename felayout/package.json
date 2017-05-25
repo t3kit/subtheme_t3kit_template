@@ -1,9 +1,8 @@
 {
-  "name": "felayout_t3kit",
-  "version": "2.0.0",
-  "description": "Front-End layout for theme_t3kit project",
+  "name": "felayout",
+  "version": "1.0.0",
+  "description": "Front-End layout for Subtheme t3kit template",
   "license": "MIT",
-  "repository": "t3kit/theme_t3kit",
   "scripts": {
     "test": "grunt check"
   },
