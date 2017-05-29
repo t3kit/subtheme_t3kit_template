@@ -4,7 +4,6 @@
 
 ***
 
-### [CHANGELOG](https://github.com/t3kit/subtheme_t3kit_template/blob/master/CHANGELOG.md)
 ### [Contributing to t3kit](https://github.com/t3kit/t3kit/blob/master/CONTRIBUTING.md)
 
 ***

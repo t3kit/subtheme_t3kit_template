@@ -1,6 +1,6 @@
 {
   "name": "t3kit/subtheme_t3kit_template",
-  "description": "Start new subtheme based on t3kit project.",
+  "description": "TYPO3 subtheme based on t3kit project.",
   "type": "typo3-cms-extension",
   "keywords": ["t3kit", "typo3", "cms", "starter"],
   "homepage": "http://t3kit.com/",
