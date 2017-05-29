@@ -25,12 +25,12 @@ npm install
 1. `felayout` works closely with t3kit docker, so to start developing using felayout we need to [install and run t3kit using docker configuration](https://github.com/t3kit/t3kit#development)
 
 
-2. Next step we need disable default styling (CSS) and JS scripts in t3kit to be able to insert it (CSS/JS) dynamically from felayout_t3kit. For this, we need to change `FElayout mode` constant from `less` to `development`.
+2. Next step we need disable default styling (CSS) and JS scripts in t3kit to be able to insert it (CSS/JS) dynamically from felayout. For this, we need to change `FElayout mode` constant from `less` to `development`.
    * TYPO3 BE -> tab `Themes` -> `Expert` -> `FElayout mode`
 
-3. Next step is to run local server (_proxied from t3kit TYPO3 installation_) `localhost:9001` wich includes all CSS/LESS/JS files (`subtheme_t3kit_template/felayout_t3kit/dev`) with livereloading. For this, we need to use command `grunt`.
+3. Next step is to run local server (_proxied from t3kit TYPO3 installation_) `localhost:9001` wich includes all CSS/LESS/JS files (`subtheme_t3kit_template/felayout/dev`) with livereloading. For this, we need to use command `grunt`.
 
-4. Last step. After all changes (CSS/LESS/JS) which you did in `felayout` you will need to compile FE files into `subtheme_t3kit_template/Resources/Public/css` or `subtheme_t3kit_template/Resources/Public/less` folder using comands: `grunt compileCss` or `grunt compileLess`. Also, keep in mind that these compilated files should be committed by separate commit with a message `update css/less` without any prefixes. [Commit messages without prefixes shouldn't go to changelog files](https://github.com/t3kit/t3kit/blob/master/CONTRIBUTING.md#labels). **Do not commit compilated files together with source files from `subtheme_t3kit_template/felayout_t3kit/dev`**
+4. Last step. After all changes (CSS/LESS/JS) which you did in `felayout` you will need to compile FE files into `subtheme_t3kit_template/Resources/Public/css` or `subtheme_t3kit_template/Resources/Public/less` folder using comands: `grunt compileCss` or `grunt compileLess`. Also, keep in mind that these compilated files should be committed by separate commit with a message `update css/less` without any prefixes. [Commit messages without prefixes shouldn't go to changelog files](https://github.com/t3kit/t3kit/blob/master/CONTRIBUTING.md#labels). **Do not commit compilated files together with source files from `subtheme_t3kit_template/felayout/dev`**
 
 
 
