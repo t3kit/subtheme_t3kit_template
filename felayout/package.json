@@ -1,7 +1,7 @@
 {
   "name": "felayout",
   "version": "1.0.0",
-  "description": "Front-End layout for Subtheme t3kit template",
+  "description": "Front-End layout for subtheme",
   "license": "MIT",
   "scripts": {
     "test": "grunt check"
