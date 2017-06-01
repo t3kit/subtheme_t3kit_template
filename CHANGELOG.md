@@ -1,4 +1,11 @@
 
+#### v0.3.1 `June 1, 2017`
+- **[TASK]** change description in felayout package.json ([03fb399](https://github.com/t3kit/subtheme_t3kit_template/commit/03fb399))
+- **[DOC]** update documentation and description ([769c6d9](https://github.com/t3kit/subtheme_t3kit_template/commit/769c6d9))
+- **[TASK]** Add .DS_Store to gitignore list ([959bd66](https://github.com/t3kit/subtheme_t3kit_template/commit/959bd66))
+
+***
+
 #### v0.3.0 `May 18, 2017`
 - **[BUGFIX]** fix felayout conf to work with TYPO3 subpages ([4fe8ddb](https://github.com/t3kit/subtheme_t3kit_template/commit/4fe8ddb))
 - **[TASK]** change @import paths for t3kit Appearance and Layout styling (css) ([fd4d722](https://github.com/t3kit/subtheme_t3kit_template/commit/fd4d722))
