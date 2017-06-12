@@ -24,7 +24,7 @@ $EM_CONF[$_EXTKEY] = array(
     'CGLcompliance_note' => '',
     'constraints' => array(
         'depends' => array(
-            'theme_t3kit' => '2.1.1',
+            'theme_t3kit' => '2.2.0',
         ),
         'conflicts' => array(
         ),
