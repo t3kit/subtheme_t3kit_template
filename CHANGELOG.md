@@ -1,4 +1,9 @@
 
+#### v1.0.0 `June 12, 2017`
+- **[TASK]** update main dependency theme-t3kit to v2.2.0 ([d76ef30](https://github.com/t3kit/subtheme_t3kit_template/commit/d76ef30))
+
+***
+
 #### v0.3.1 `June 1, 2017`
 - **[TASK]** change description in felayout package.json ([03fb399](https://github.com/t3kit/subtheme_t3kit_template/commit/03fb399))
 - **[DOC]** update documentation and description ([769c6d9](https://github.com/t3kit/subtheme_t3kit_template/commit/769c6d9))
