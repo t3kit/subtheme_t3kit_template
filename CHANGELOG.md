@@ -1,4 +1,9 @@
 
+#### v1.0.1 `July 4, 2017`
+- **[TASK]** update dependencies, theme_t3kit to v2.2.1 ([0537043](https://github.com/t3kit/subtheme_t3kit_template/commit/0537043))
+
+***
+
 #### v1.0.0 `June 12, 2017`
 - **[TASK]** update main dependency theme-t3kit to v2.2.0 ([d76ef30](https://github.com/t3kit/subtheme_t3kit_template/commit/d76ef30))
 
