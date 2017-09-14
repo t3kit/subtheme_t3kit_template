@@ -1,4 +1,14 @@
 
+#### v1.1.0 `September 14, 2017`
+- **[TASK]** update composer dependencies, theme-t3kit v2.3.0 ([46fea02](https://github.com/t3kit/subtheme_t3kit_template/commit/46fea02))
+- **[FEATURE]** add XING social icon ([83679d8](https://github.com/t3kit/subtheme_t3kit_template/commit/83679d8))
+- **[TASK]** sync subtheme felayout with theme_t3kit felayout ([8e03c08](https://github.com/t3kit/subtheme_t3kit_template/commit/8e03c08))
+- **[TASK]** update stylelintrc config ([0e9e171](https://github.com/t3kit/subtheme_t3kit_template/commit/0e9e171))
+- **[TASK]** update felayout npm dependencies ([e473433](https://github.com/t3kit/subtheme_t3kit_template/commit/e473433))
+- **[DOC]** update README, add info about t3kit-cli ([5d3a0a6](https://github.com/t3kit/subtheme_t3kit_template/commit/5d3a0a6))
+
+***
+
 #### v1.0.1 `July 4, 2017`
 - **[TASK]** update dependencies, theme_t3kit to v2.2.1 ([0537043](https://github.com/t3kit/subtheme_t3kit_template/commit/0537043))
 
