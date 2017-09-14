@@ -15,6 +15,7 @@
 @import '../../../../theme_t3kit/felayout_t3kit/dev/js/main/contentElements/heroImage.js';
 @import '../../../../theme_t3kit/felayout_t3kit/dev/js/main/contentElements/sliderContainer.js';
 @import '../../../../theme_t3kit/felayout_t3kit/dev/js/main/contentElements/imageTextLink.js';
+@import '../../../../theme_t3kit/felayout_t3kit/dev/js/main/contentElements/bootstrapSlider.js';
 
 // plugins
 @import '../../../../theme_t3kit/felayout_t3kit/dev/js/main/plugins/news/newsCarousel.js';
