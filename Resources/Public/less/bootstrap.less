@@ -868,6 +868,11 @@
 //** Horizontal line color.
 @hr-border:                   @gray-lighter;
 
+// Custom media queries breakpoints
+@screen-xs--custom: 520px;
+@screen-md--custom: 1090px;
+@screen-lg--custom: 1300px;
+
 // Primary color
 @main-color:                    #f86230;
 
@@ -883,6 +888,7 @@
 @header-top-height:             50px;
 @header-top-bg-color:           @main-body-bg;
 @header-top-color:              fade(@main-text-color, 50%);
+@header-top-search-border-color: @border-color;
 
 @header-middle-height:          110px;
 @header-middle-bg-color:        @main-body-bg;
@@ -946,6 +952,19 @@
 
 @custom-screen-xl:              1366px;
 @custom-screen-xxl:             1920px;
+
+// Bootstrap Carousel
+@carousel-indicator-bg:         @main-body-bg;
+
+// Logo Carousel
+@logo-carousel-control-color:   lighten(@main-text-color, 10%);
+
+// Quote
+@quote-footer-title-color:      @main-text-color;
+
+// Simple Lightbox
+@sl-overlay-background:         darken(@main-text-color, 30%);
+@sl-navigation-color:           @main-body-bg;
 
 // =========================================================
 // BOOTSTRAP Variables  ====================================
