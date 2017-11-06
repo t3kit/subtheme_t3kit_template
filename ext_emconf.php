@@ -5,7 +5,7 @@ $EM_CONF[$_EXTKEY] = array(
     'description' => 'TBD',
     'category' => 'templates',
     'shy' => 0,
-    'version' => '1.1.0',
+    'version' => '1.2.0',
     'dependencies' => '',
     'conflicts' => '',
     'priority' => '',
@@ -24,7 +24,7 @@ $EM_CONF[$_EXTKEY] = array(
     'CGLcompliance_note' => '',
     'constraints' => array(
         'depends' => array(
-            'theme_t3kit' => '2.3.0-2.3.99'
+            'theme_t3kit' => '2.4.0-2.4.99'
         ),
         'conflicts' => array(
         ),
