@@ -20,3 +20,5 @@
 # themes.configuration.socialmedia.instagramLink = https://instagram.com/explore/tags/typo3/
 # themes.configuration.socialmedia.useYoutube = 1
 # themes.configuration.socialmedia.youtubeLink = https://www.youtube.com/user/typo3/
+# themes.configuration.socialmedia.useMynewsdesk = 1
+# themes.configuration.socialmedia.mynewsdeskLink = https://www.mynewsdesk.com/
