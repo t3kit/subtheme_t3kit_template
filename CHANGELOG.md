@@ -1,4 +1,12 @@
 
+#### v1.3.0 `February 23, 2018`
+- **[TASK]** add mynewsdeskLink social icon constants (#4) ([242624a](https://github.com/t3kit/subtheme_t3kit_template/commit/242624a))
+- **[TASK]** update ext/composer dependencies, theme-t3kit v2.5.0 ([e3a4fe6](https://github.com/t3kit/subtheme_t3kit_template/commit/e3a4fe6))
+- **[TASK]** include skipLinks styling ([e8406b4](https://github.com/t3kit/subtheme_t3kit_template/commit/e8406b4))
+- **[TASK]** update variables for button styles ([295f4a2](https://github.com/t3kit/subtheme_t3kit_template/commit/295f4a2))
+
+***
+
 #### v1.2.0 `November 6, 2017`
 - **[TASK]** update composer dependencies, theme-t3kit v2.4.0 ([a20df9d](https://github.com/t3kit/subtheme_t3kit_template/commit/a20df9d))
 - **[TASK]** sync subtheme with theme_t3kit ([14faeee](https://github.com/t3kit/subtheme_t3kit_template/commit/14faeee))
