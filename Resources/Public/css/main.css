@@ -95,6 +95,14 @@
 .news-article-footer .news-list-tags:before {
   content: "\e963";
 }
+.skip-links {
+  text-align: center;
+  background-color: #2b2b2b;
+  line-height: 60px;
+}
+.skip-links__item:focus {
+  color: #fff;
+}
 .mobile-menu-opened .header {
   height: 100%;
 }
@@ -174,16 +182,16 @@
   padding: 0;
   display: none;
 }
-.header-top > .nav > li {
+.header-top .nav > li {
   display: inline-block;
 }
-.header-top > .nav > li > a {
+.header-top .nav > li > a {
   padding: 0 14px;
   display: inline-block;
   line-height: 50px;
   color: #f86230;
 }
-.no-touch .header-top > .nav > li > a:hover {
+.no-touch .header-top .nav > li > a:hover {
   color: #fa916e;
   background: transparent;
 }
@@ -598,6 +606,12 @@
 }
 .main-navigation__sub-item > .main-navigation__open-sub-menu-link {
   line-height: 40px;
+}
+.main-navigation__item:not(._active) .main-navigation__item-link:focus,
+.main-navigation__sub-item:not(._active) .main-navigation__item-link:focus,
+.main-navigation__item:not(._active) .main-navigation__sub-item-link:focus,
+.main-navigation__sub-item:not(._active) .main-navigation__sub-item-link:focus {
+  color: #fff;
 }
 .main-navigation__sub-item-list {
   list-style: none;
@@ -2455,6 +2469,9 @@ div.awesomplete li[aria-selected="true"] mark {
   list-style: none;
   padding-left: 25px;
 }
+.ce-textpic .image a {
+  display: inline-block;
+}
 .ce-gallery img {
   display: block;
   height: auto;
@@ -3585,10 +3602,15 @@ div.awesomplete li[aria-selected="true"] mark {
 .img-text-link._hover-9:before {
   content: '';
   display: block;
-  padding-top: 67.35%;
   background: rgba(248, 98, 48, 0.3);
-  position: relative;
   z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
 }
 .img-text-link._hover-9 .img-text-link__header {
   position: absolute;
@@ -3619,7 +3641,7 @@ div.awesomplete li[aria-selected="true"] mark {
   }
 }
 .img-text-link._hover-9 .img-text-link__img {
-  position: absolute;
+  position: relative;
   width: 100%;
   transition: all 0.3s ease;
   left: 0;
@@ -4103,6 +4125,9 @@ div.awesomplete li[aria-selected="true"] mark {
 ._pagination-outside .slider-container__pagination {
   position: static;
 }
+.panel-title {
+  font-weight: normal;
+}
 .panel-title > a {
   display: block;
   padding: 10px 15px;
@@ -4479,6 +4504,7 @@ div.awesomplete li[aria-selected="true"] mark {
   top: 0;
   left: 0;
   bottom: 0;
+  z-index: 2;
   width: 6%;
   font-size: 48px;
   color: #fff;
@@ -4574,7 +4600,7 @@ div.awesomplete li[aria-selected="true"] mark {
 }
 @media (min-width: 1366px) {
   .top-content .carousel-caption {
-    left: calc((100vw - (1170px - 30px)) / 2);
+    left: calc((100% - (1170px - 30px)) / 2);
     width: 45%;
   }
 }
@@ -4756,6 +4782,14 @@ div.awesomplete li[aria-selected="true"] mark {
     font-size: 30.1px;
   }
 }
+.inverse h1,
+.inverse h2,
+.inverse h3,
+.inverse h4,
+.inverse h5 {
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
 .inverse a {
   color: #feefea;
 }
@@ -4774,14 +4808,6 @@ div.awesomplete li[aria-selected="true"] mark {
 }
 .inverse p {
   color: #f2f2f2;
-  -webkit-font-smoothing: antialiased;
-}
-.inverse h1,
-.inverse h2,
-.inverse h3,
-.inverse h4,
-.inverse h5 {
-  color: #ffffff;
   -webkit-font-smoothing: antialiased;
 }
 .inverse .icons {
@@ -5505,5 +5531,49 @@ div.awesomplete li[aria-selected="true"] mark {
 h1,
 h2 {
   font-family: 'Cormorant', Garamond, "Times New Roman", serif;
+}
+.btn-default {
+  color: #fff;
+  background-color: #f86230;
+  border-color: transparent;
+}
+.btn-default:focus,
+.btn-default:hover {
+  color: #fff;
+  background-color: #ed4108;
+  border-color: rgba(0, 0, 0, 0);
+}
+.btn-default--inverted {
+  color: #f86230;
+  background-color: #fff;
+  border-color: transparent;
+}
+.btn-default--inverted:focus,
+.btn-default--inverted:hover {
+  color: #f86230;
+  background-color: #e6e6e6;
+  border-color: rgba(0, 0, 0, 0);
+}
+.btn-bordered {
+  color: #f86230;
+  background-color: transparent;
+  border-color: #f86230;
+}
+.btn-bordered:focus,
+.btn-bordered:hover {
+  color: #f86230;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #ed4108;
+}
+.btn-bordered--inverted {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+.btn-bordered--inverted:focus,
+.btn-bordered--inverted:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #e6e6e6;
 }
 /*# sourceMappingURL=main.css.map */
