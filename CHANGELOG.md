@@ -1,4 +1,12 @@
 
+#### v1.4.0 `March 19, 2018`
+- **[TASK]** update dependencies, theme-t3kit v2.6.0 ([6c2eabd](https://github.com/t3kit/subtheme_t3kit_template/commit/6c2eabd))
+- **[TASK]** add package-lock.json ([9591e53](https://github.com/t3kit/subtheme_t3kit_template/commit/9591e53))
+- **[TASK]** update FE dependencies ([a0b74a4](https://github.com/t3kit/subtheme_t3kit_template/commit/a0b74a4))
+- **[DOC]** update felayout README, update required dependencies (node/npm) ([5e4f3d2](https://github.com/t3kit/subtheme_t3kit_template/commit/5e4f3d2))
+
+***
+
 #### v1.3.0 `February 23, 2018`
 - **[TASK]** add mynewsdeskLink social icon constants (#4) ([242624a](https://github.com/t3kit/subtheme_t3kit_template/commit/242624a))
 - **[TASK]** update ext/composer dependencies, theme-t3kit v2.5.0 ([e3a4fe6](https://github.com/t3kit/subtheme_t3kit_template/commit/e3a4fe6))
