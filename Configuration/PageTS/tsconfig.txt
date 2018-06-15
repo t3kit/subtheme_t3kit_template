@@ -6,3 +6,4 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:subtheme_t3kit_template/Configuration/ContentElements" extensions="pagets">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:subtheme_t3kit_template/Configuration/GridElements/PageTS" extensions="pagets">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:subtheme_t3kit_template/Configuration/PageTS/iconFonts.pagets">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:subtheme_t3kit_template/Resources/Private/Extensions/RTE/PageTS/tsconfig.txt">

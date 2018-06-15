@@ -1,0 +1,1 @@
+RTE.default.preset = subtheme_t3kit_template_default
