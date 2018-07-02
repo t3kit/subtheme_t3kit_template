@@ -220,60 +220,65 @@ jQuery(function ($) {
   $(document).ready(function () {
     // initialize swiper when document ready
     // http://idangero.us/swiper/api/
-    $('.js__logo-carousel').each(function () {
-      // Get json content from element LogoCarousel.html
-      var label = JSON.parse($('#js__aria-labels').html())
 
-      var swiper = $(this).swiper({
-        nextButton: '.js__logo-carousel__btn-next',
-        prevButton: '.js__logo-carousel__btn-prev',
-        slidesPerView: 5,
-        preloadImages: false,
-        lazyLoading: true,
-        watchSlidesVisibility: true,
-        lazyLoadingInPrevNext: true,
-        slideVisibleClass: 'is-visible',
-        spaceBetween: 20,
-        autoplay: $(this).data('autoplay'),
-        a11y: true,
-        prevSlideMessage: label.ariaLabel.prevSlideMessage,
-        nextSlideMessage: label.ariaLabel.nextSlideMessage,
-        firstSlideMessage: label.ariaLabel.firstSlideMessage,
-        lastSlideMessage: label.ariaLabel.lastSlideMessage,
-        paginationBulletMessage: label.ariaLabel.paginationBulletMessage,
-        // Responsive breakpoints
-        breakpoints: {
-          // when window width is <= 480px
-          480: {
-            slidesPerView: 1
-          },
+    // Get json content from element LogoCarousel.html
+    var ariaLabels = document.getElementsByClassName('js__aria-labels')
+    if (ariaLabels && ariaLabels.length > 0) {
+      // Use only first aria label object because they are all equal
+      var label = JSON.parse(ariaLabels[0].innerHTML)
 
-          // when window width is <= 600px
-          600: {
-            slidesPerView: 2
-          },
+      $('.js__logo-carousel').each(function () {
+        var swiper = $(this).swiper({
+          nextButton: '.js__logo-carousel__btn-next',
+          prevButton: '.js__logo-carousel__btn-prev',
+          slidesPerView: 5,
+          preloadImages: false,
+          lazyLoading: true,
+          watchSlidesVisibility: true,
+          lazyLoadingInPrevNext: true,
+          slideVisibleClass: 'is-visible',
+          spaceBetween: 20,
+          autoplay: $(this).data('autoplay'),
+          a11y: true,
+          prevSlideMessage: label.ariaLabel.prevSlideMessage,
+          nextSlideMessage: label.ariaLabel.nextSlideMessage,
+          firstSlideMessage: label.ariaLabel.firstSlideMessage,
+          lastSlideMessage: label.ariaLabel.lastSlideMessage,
+          paginationBulletMessage: label.ariaLabel.paginationBulletMessage,
+          // Responsive breakpoints
+          breakpoints: {
+            // when window width is <= 480px
+            480: {
+              slidesPerView: 1
+            },
 
-          // when window width is <= 768px
-          768: {
-            slidesPerView: 3
-          },
+            // when window width is <= 600px
+            600: {
+              slidesPerView: 2
+            },
 
-          // when window width is <= 992px
-          992: {
-            slidesPerView: 4
-          }
-        }
-      })
-      // if the selected swipe is not visible when focused
-      // put it into view
-      $(swiper.slides).each(function (index, element) {
-        $(element).on('focusin', function (e) {
-          if ($(e.target).not('.is-visible')) {
-            swiper.slideTo(index)
+            // when window width is <= 768px
+            768: {
+              slidesPerView: 3
+            },
+
+            // when window width is <= 992px
+            992: {
+              slidesPerView: 4
+            }
           }
         })
+        // if the selected swipe is not visible when focused
+        // put it into view
+        $(swiper.slides).each(function (index, element) {
+          $(element).on('focusin', function (e) {
+            if ($(e.target).not('.is-visible')) {
+              swiper.slideTo(index)
+            }
+          })
+        })
       })
-    })
+    }
   })
 })(jQuery)
 
@@ -288,25 +293,25 @@ jQuery(function ($) {
     // https://github.com/nk-o/jarallax
     if (!$('html').hasClass('IE')) { // disabled in IE since scrolling looks jerky
       $('.parallax-img').jarallax({
-        type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacit
+        type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacity
         speed: 0.5,
-        noAndroid: false,
-        noIos: true
+        disableParallax: /iPad|iPhone|iPod|Edge/ // disable Ios and Microsoft Edge
       })
       $('.parallax-resimg').each(function () {
         $(this).jarallax({
-          type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacit
+          type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacity
           speed: 0.5,
-          noAndroid: false,
-          imgSrc: $(this).css('background-image').trim().slice(5, -2),
-          noIos: true
+          disableParallax: /iPad|iPhone|iPod|Edge/, // disable Ios and Microsoft Edge
+          imgSrc: $(this).css('background-image').match(/\(([^)]+)\)/)[1].replace(/"/g, '')
         })
       })
-      $('.parallax-video').jarallax({
-        type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacit
-        speed: 0.5,
-        noAndroid: true,
-        noIos: true
+      $('.parallax-video').each(function () {
+        $(this).jarallax({
+          type: 'scroll', // scroll, scale, opacity, scroll-opacity, scale-opacity
+          speed: 0.5,
+          disableParallax: /iPad|iPhone|iPod|Android/, // disable Ios and Android
+          videoSrc: $(this).attr('data-video-url')
+        })
       })
     }
   })
@@ -729,6 +734,7 @@ var mainSearchInputList = {}
 
 // ########## general.js ###########
 /* global jQuery */
+/* global objectFitImages */
 
 ;(function ($) {
   'use strict'
@@ -758,6 +764,9 @@ var mainSearchInputList = {}
       })
     })
   }
+
+  // call object-fit-images plugin
+  objectFitImages()
 })(jQuery)
 
 // ^^^^^^^^^^ general.js ^^^^^^^^^^^

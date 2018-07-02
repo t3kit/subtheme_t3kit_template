@@ -6443,16 +6443,246 @@ $.fn.simpleLightbox = function( options )
 //==============================================================================
 /*!
  * Name    : Just Another Parallax [Jarallax]
- * Version : 1.9.3
+ * Version : 1.10.3
  * Author  : nK <https://nkdev.info>
  * GitHub  : https://github.com/nk-o/jarallax
  */
-;(function() {
-'use strict';
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+
+var win;
+
+if (typeof window !== "undefined") {
+    win = window;
+} else if (typeof global !== "undefined") {
+    win = global;
+} else if (typeof self !== "undefined") {
+    win = self;
+} else {
+    win = {};
+}
+
+module.exports = win;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function (callback) {
+
+	if (document.readyState === 'complete' || document.readyState === 'interactive') {
+		// Already ready or interactive, execute callback
+		callback.call();
+	} else if (document.attachEvent) {
+		// Old browsers
+		document.attachEvent('onreadystatechange', function () {
+			if (document.readyState === 'interactive') callback.call();
+		});
+	} else if (document.addEventListener) {
+		// Modern browsers
+		document.addEventListener('DOMContentLoaded', callback);
+	}
+};
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var g;
+
+// This works in non-strict mode
+g = function () {
+	return this;
+}();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1, eval)("this");
+} catch (e) {
+	// This works if the window reference is available
+	if ((typeof window === "undefined" ? "undefined" : _typeof(window)) === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+/***/ }),
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(12);
+
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _liteReady = __webpack_require__(1);
+
+var _liteReady2 = _interopRequireDefault(_liteReady);
+
+var _global = __webpack_require__(0);
+
+var _jarallax = __webpack_require__(13);
+
+var _jarallax2 = _interopRequireDefault(_jarallax);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// no conflict
+var oldPlugin = _global.window.jarallax;
+_global.window.jarallax = _jarallax2.default;
+_global.window.jarallax.noConflict = function () {
+    _global.window.jarallax = oldPlugin;
+    return this;
+};
+
+// jQuery support
+if (typeof _global.jQuery !== 'undefined') {
+    var jQueryPlugin = function jQueryPlugin() {
+        var args = arguments || [];
+        Array.prototype.unshift.call(args, this);
+        var res = _jarallax2.default.apply(_global.window, args);
+        return (typeof res === 'undefined' ? 'undefined' : _typeof(res)) !== 'object' ? res : this;
+    };
+    jQueryPlugin.constructor = _jarallax2.default.constructor;
+
+    // no conflict
+    var oldJqPlugin = _global.jQuery.fn.jarallax;
+    _global.jQuery.fn.jarallax = jQueryPlugin;
+    _global.jQuery.fn.jarallax.noConflict = function () {
+        _global.jQuery.fn.jarallax = oldJqPlugin;
+        return this;
+    };
+}
+
+// data-jarallax initialization
+(0, _liteReady2.default)(function () {
+    (0, _jarallax2.default)(document.querySelectorAll('[data-jarallax]'));
+});
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _liteReady = __webpack_require__(1);
+
+var _liteReady2 = _interopRequireDefault(_liteReady);
+
+var _rafl = __webpack_require__(14);
+
+var _rafl2 = _interopRequireDefault(_rafl);
+
+var _global = __webpack_require__(0);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -6466,37 +6696,29 @@ var supportTransform = function () {
     }
     return false;
 }();
-var ua = navigator.userAgent;
-var isAndroid = ua.toLowerCase().indexOf('android') > -1;
-var isIOs = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
-
-// requestAnimationFrame polyfill
-var rAF = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (callback) {
-    setTimeout(callback, 1000 / 60);
-};
-
-// init events
-function addEventListener(el, eventName, handler) {
-    el.addEventListener(eventName, handler);
-}
 
 // Window data
 var wndW = void 0;
 var wndH = void 0;
 var wndY = void 0;
 var forceResizeParallax = false;
+var forceScrollParallax = false;
 function updateWndVars(e) {
-    wndW = window.innerWidth || document.documentElement.clientWidth;
-    wndH = window.innerHeight || document.documentElement.clientHeight;
-    if ((typeof e === 'undefined' ? 'undefined' : _typeof(e)) === 'object' && (e.type === 'load' || e.type === 'DOMContentLoaded')) {
+    wndW = _global.window.innerWidth || document.documentElement.clientWidth;
+    wndH = _global.window.innerHeight || document.documentElement.clientHeight;
+    if ((typeof e === 'undefined' ? 'undefined' : _typeof(e)) === 'object' && (e.type === 'load' || e.type === 'dom-loaded')) {
         forceResizeParallax = true;
     }
 }
 updateWndVars();
-addEventListener(window, 'resize', updateWndVars);
-addEventListener(window, 'orientationchange', updateWndVars);
-addEventListener(window, 'load', updateWndVars);
-addEventListener(window, 'DOMContentLoaded', updateWndVars);
+_global.window.addEventListener('resize', updateWndVars);
+_global.window.addEventListener('orientationchange', updateWndVars);
+_global.window.addEventListener('load', updateWndVars);
+(0, _liteReady2.default)(function () {
+    updateWndVars({
+        type: 'dom-loaded'
+    });
+});
 
 // list with all jarallax instances
 // need to render all in one scroll/resize event
@@ -6509,16 +6731,17 @@ function updateParallax() {
         return;
     }
 
-    if (window.pageYOffset !== undefined) {
-        wndY = window.pageYOffset;
+    if (_global.window.pageYOffset !== undefined) {
+        wndY = _global.window.pageYOffset;
     } else {
         wndY = (document.documentElement || document.body.parentNode || document.body).scrollTop;
     }
 
     var isResized = forceResizeParallax || !oldPageData || oldPageData.width !== wndW || oldPageData.height !== wndH;
-    var isScrolled = isResized || !oldPageData || oldPageData.y !== wndY;
+    var isScrolled = forceScrollParallax || isResized || !oldPageData || oldPageData.y !== wndY;
 
     forceResizeParallax = false;
+    forceScrollParallax = false;
 
     if (isResized || isScrolled) {
         jarallaxList.forEach(function (item) {
@@ -6537,8 +6760,24 @@ function updateParallax() {
         };
     }
 
-    rAF(updateParallax);
+    (0, _rafl2.default)(updateParallax);
 }
+
+// ResizeObserver
+var resizeObserver = global.ResizeObserver ? new global.ResizeObserver(function (entry) {
+    if (entry && entry.length) {
+        (0, _rafl2.default)(function () {
+            entry.forEach(function (item) {
+                if (item.target && item.target.jarallax) {
+                    if (!forceResizeParallax) {
+                        item.target.jarallax.onResize();
+                    }
+                    forceScrollParallax = true;
+                }
+            });
+        });
+    }
+}) : false;
 
 var instanceID = 0;
 
@@ -6565,8 +6804,9 @@ var Jarallax = function () {
             keepImg: false, // keep <img> tag in it's default place
             elementInViewport: null,
             zIndex: -100,
-            noAndroid: false,
-            noIos: false,
+            disableParallax: false,
+            disableVideo: false,
+            automaticResize: true, // use ResizeObserver to recalculate position and size of parallax image
 
             // video
             videoSrc: null,
@@ -6586,6 +6826,7 @@ var Jarallax = function () {
         var deprecatedDataAttribute = self.$item.getAttribute('data-jarallax');
         var oldDataOptions = JSON.parse(deprecatedDataAttribute || '{}');
         if (deprecatedDataAttribute) {
+            // eslint-disable-next-line no-console
             console.warn('Detected usage of deprecated data-jarallax JSON options, you should use pure data-attribute options. See info here - https://github.com/nk-o/jarallax/issues/53');
         }
 
@@ -6614,11 +6855,64 @@ var Jarallax = function () {
         // fix speed option [-1.0, 2.0]
         self.options.speed = Math.min(2, Math.max(-1, parseFloat(self.options.speed)));
 
+        // deprecated noAndroid and noIos options
+        if (self.options.noAndroid || self.options.noIos) {
+            // eslint-disable-next-line no-console
+            console.warn('Detected usage of deprecated noAndroid or noIos options, you should use disableParallax option. See info here - https://github.com/nk-o/jarallax/#disable-on-mobile-devices');
+
+            // prepare fallback if disableParallax option is not used
+            if (!self.options.disableParallax) {
+                if (self.options.noIos && self.options.noAndroid) {
+                    self.options.disableParallax = /iPad|iPhone|iPod|Android/;
+                } else if (self.options.noIos) {
+                    self.options.disableParallax = /iPad|iPhone|iPod/;
+                } else if (self.options.noAndroid) {
+                    self.options.disableParallax = /Android/;
+                }
+            }
+        }
+
+        // prepare disableParallax callback
+        if (typeof self.options.disableParallax === 'string') {
+            self.options.disableParallax = new RegExp(self.options.disableParallax);
+        }
+        if (self.options.disableParallax instanceof RegExp) {
+            var disableParallaxRegexp = self.options.disableParallax;
+            self.options.disableParallax = function () {
+                return disableParallaxRegexp.test(navigator.userAgent);
+            };
+        }
+        if (typeof self.options.disableParallax !== 'function') {
+            self.options.disableParallax = function () {
+                return false;
+            };
+        }
+
+        // prepare disableVideo callback
+        if (typeof self.options.disableVideo === 'string') {
+            self.options.disableVideo = new RegExp(self.options.disableVideo);
+        }
+        if (self.options.disableVideo instanceof RegExp) {
+            var disableVideoRegexp = self.options.disableVideo;
+            self.options.disableVideo = function () {
+                return disableVideoRegexp.test(navigator.userAgent);
+            };
+        }
+        if (typeof self.options.disableVideo !== 'function') {
+            self.options.disableVideo = function () {
+                return false;
+            };
+        }
+
         // custom element to check if parallax in viewport
         var elementInVP = self.options.elementInViewport;
         // get first item from array
         if (elementInVP && (typeof elementInVP === 'undefined' ? 'undefined' : _typeof(elementInVP)) === 'object' && typeof elementInVP.length !== 'undefined') {
-            elementInVP = elementInVP[0];
+            var _elementInVP = elementInVP;
+
+            var _elementInVP2 = _slicedToArray(_elementInVP, 1);
+
+            elementInVP = _elementInVP2[0];
         }
         // check if dom element
         if (!(elementInVP instanceof Element)) {
@@ -6634,7 +6928,7 @@ var Jarallax = function () {
             // position fixed is needed for the most of browsers because absolute position have glitches
             // on MacOS with smooth scroll there is a huge lags with absolute position - https://github.com/nk-o/jarallax/issues/75
             // on mobile devices better scrolled with absolute position
-            position: isAndroid || isIOs ? 'absolute' : 'fixed'
+            position: /iPad|iPhone|iPod|Android/.test(navigator.userAgent) ? 'absolute' : 'fixed'
         };
 
         if (self.initImg() && self.canInitParallax()) {
@@ -6649,7 +6943,7 @@ var Jarallax = function () {
         key: 'css',
         value: function css(el, styles) {
             if (typeof styles === 'string') {
-                return window.getComputedStyle(el).getPropertyValue(styles);
+                return _global.window.getComputedStyle(el).getPropertyValue(styles);
             }
 
             // add transform property with vendor prefix
@@ -6735,7 +7029,7 @@ var Jarallax = function () {
     }, {
         key: 'canInitParallax',
         value: function canInitParallax() {
-            return supportTransform && !(isAndroid && this.options.noAndroid) && !(isIOs && this.options.noIos);
+            return supportTransform && !this.options.disableParallax();
         }
     }, {
         key: 'init',
@@ -6800,12 +7094,14 @@ var Jarallax = function () {
                 // use div with background image
             } else {
                 self.image.$item = document.createElement('div');
-                imageStyles = self.extend({
-                    'background-position': self.options.imgPosition,
-                    'background-size': self.options.imgSize,
-                    'background-repeat': self.options.imgRepeat,
-                    'background-image': 'url("' + self.image.src + '")'
-                }, containerStyles, imageStyles);
+                if (self.image.src) {
+                    imageStyles = self.extend({
+                        'background-position': self.options.imgPosition,
+                        'background-size': self.options.imgSize,
+                        'background-repeat': self.options.imgRepeat,
+                        'background-image': 'url("' + self.image.src + '")'
+                    }, containerStyles, imageStyles);
+                }
             }
 
             if (self.options.type === 'opacity' || self.options.type === 'scale' || self.options.type === 'scale-opacity' || self.options.speed === 1) {
@@ -6838,6 +7134,11 @@ var Jarallax = function () {
             self.coverImage();
             self.clipContainer();
             self.onScroll(true);
+
+            // ResizeObserver
+            if (self.options.automaticResize && resizeObserver) {
+                resizeObserver.observe(self.$item);
+            }
 
             // call onInit event
             if (self.options.onInit) {
@@ -6943,8 +7244,9 @@ var Jarallax = function () {
 
             var self = this;
             var rect = self.image.$container.getBoundingClientRect();
-            var width = rect.width;
-            var height = rect.height;
+            var width = rect.width,
+                height = rect.height;
+
 
             if (!self.$clipStyles) {
                 self.$clipStyles = document.createElement('style');
@@ -6971,6 +7273,7 @@ var Jarallax = function () {
             var rect = self.image.$container.getBoundingClientRect();
             var contH = rect.height;
             var speed = self.options.speed;
+
             var isScroll = self.options.type === 'scroll' || self.options.type === 'scroll-opacity';
             var scrollDist = 0;
             var resultH = contH;
@@ -7168,47 +7471,260 @@ var plugin = function plugin(items) {
 };
 plugin.constructor = Jarallax;
 
-// no conflict
-var oldPlugin = window.jarallax;
-window.jarallax = plugin;
-window.jarallax.noConflict = function () {
-    window.jarallax = oldPlugin;
-    return this;
-};
+exports.default = plugin;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
-// jQuery support
-if (typeof jQuery !== 'undefined') {
-    var jQueryPlugin = function jQueryPlugin() {
-        var args = arguments || [];
-        Array.prototype.unshift.call(args, this);
-        var res = plugin.apply(window, args);
-        return (typeof res === 'undefined' ? 'undefined' : _typeof(res)) !== 'object' ? res : this;
-    };
-    jQueryPlugin.constructor = Jarallax;
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
 
-    // no conflict
-    var oldJqPlugin = jQuery.fn.jarallax;
-    jQuery.fn.jarallax = jQueryPlugin;
-    jQuery.fn.jarallax.noConflict = function () {
-        jQuery.fn.jarallax = oldJqPlugin;
-        return this;
-    };
+"use strict";
+
+
+var global = __webpack_require__(0);
+
+/**
+ * `requestAnimationFrame()`
+ */
+
+var request = global.requestAnimationFrame || global.webkitRequestAnimationFrame || global.mozRequestAnimationFrame || fallback;
+
+var prev = +new Date();
+function fallback(fn) {
+  var curr = +new Date();
+  var ms = Math.max(0, 16 - (curr - prev));
+  var req = setTimeout(fn, ms);
+  return prev = curr, req;
 }
 
-// data-jarallax initialization
-addEventListener(window, 'DOMContentLoaded', function () {
-    plugin(document.querySelectorAll('[data-jarallax]'));
-});
-}());
+/**
+ * `cancelAnimationFrame()`
+ */
 
+var cancel = global.cancelAnimationFrame || global.webkitCancelAnimationFrame || global.mozCancelAnimationFrame || clearTimeout;
+
+if (Function.prototype.bind) {
+  request = request.bind(global);
+  cancel = cancel.bind(global);
+}
+
+exports = module.exports = request;
+exports.cancel = cancel;
+
+/***/ })
+/******/ ]);
 /*!
- * Name    : Video Worker (wrapper for Youtube, Vimeo and Local videos)
- * Version : 1.9.3
+ * Name    : Video Background Extension for Jarallax
+ * Version : 1.0.1
  * Author  : nK <https://nkdev.info>
  * GitHub  : https://github.com/nk-o/jarallax
  */
-;(function() {
-'use strict';
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {
+
+var win;
+
+if (typeof window !== "undefined") {
+    win = window;
+} else if (typeof global !== "undefined") {
+    win = global;
+} else if (typeof self !== "undefined") {
+    win = self;
+} else {
+    win = {};
+}
+
+module.exports = win;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function (callback) {
+
+	if (document.readyState === 'complete' || document.readyState === 'interactive') {
+		// Already ready or interactive, execute callback
+		callback.call();
+	} else if (document.attachEvent) {
+		// Old browsers
+		document.attachEvent('onreadystatechange', function () {
+			if (document.readyState === 'interactive') callback.call();
+		});
+	} else if (document.addEventListener) {
+		// Modern browsers
+		document.addEventListener('DOMContentLoaded', callback);
+	}
+};
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var g;
+
+// This works in non-strict mode
+g = function () {
+	return this;
+}();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || Function("return this")() || (1, eval)("this");
+} catch (e) {
+	// This works if the window reference is available
+	if ((typeof window === "undefined" ? "undefined" : _typeof(window)) === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = __webpack_require__(9);
+
+/***/ }),
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(8);
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _videoWorker = __webpack_require__(3);
+
+var _videoWorker2 = _interopRequireDefault(_videoWorker);
+
+var _global = __webpack_require__(0);
+
+var _global2 = _interopRequireDefault(_global);
+
+var _liteReady = __webpack_require__(1);
+
+var _liteReady2 = _interopRequireDefault(_liteReady);
+
+var _jarallaxVideo = __webpack_require__(10);
+
+var _jarallaxVideo2 = _interopRequireDefault(_jarallaxVideo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// add video worker globally to fallback jarallax < 1.10 versions
+_global2.default.VideoWorker = _global2.default.VideoWorker || _videoWorker2.default;
+
+(0, _jarallaxVideo2.default)();
+
+// data-jarallax-video initialization
+(0, _liteReady2.default)(function () {
+    if (typeof jarallax !== 'undefined') {
+        jarallax(document.querySelectorAll('[data-jarallax-video]'));
+    }
+});
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
@@ -7244,18 +7760,13 @@ Deferred.prototype = {
     }
 };
 
-// init events
-function addEventListener(el, eventName, handler) {
-    el.addEventListener(eventName, handler);
-}
-
 var ID = 0;
 var YoutubeAPIadded = 0;
 var VimeoAPIadded = 0;
 var loadingYoutubePlayer = 0;
 var loadingVimeoPlayer = 0;
-var loadingYoutubeDeffer = new Deferred();
-var loadingVimeoDeffer = new Deferred();
+var loadingYoutubeDefer = new Deferred();
+var loadingVimeoDefer = new Deferred();
 
 var VideoWorker = function () {
     function VideoWorker(url, options) {
@@ -7266,13 +7777,13 @@ var VideoWorker = function () {
         self.url = url;
 
         self.options_default = {
-            autoplay: 1,
-            loop: 1,
-            mute: 1,
-            volume: 0,
-            controls: 0,
+            autoplay: false,
+            loop: false,
+            mute: false,
+            volume: 100,
+            showContols: true,
 
-            // start / end video time in ms
+            // start / end video time in seconds
             startTime: 0,
             endTime: 0
         };
@@ -7338,6 +7849,7 @@ var VideoWorker = function () {
                     // eslint-disable-next-line no-useless-escape
                     var match = val.match(/^(mp4|webm|ogv|ogg)\:(.*)/);
                     if (match && match[1] && match[2]) {
+                        // eslint-disable-next-line prefer-destructuring
                         result[match[1] === 'ogv' ? 'ogg' : match[1]] = match[2];
                         ready = 1;
                     }
@@ -7478,6 +7990,114 @@ var VideoWorker = function () {
             }
         }
     }, {
+        key: 'mute',
+        value: function mute() {
+            var self = this;
+            if (!self.player) {
+                return;
+            }
+
+            if (self.type === 'youtube' && self.player.mute) {
+                self.player.mute();
+            }
+
+            if (self.type === 'vimeo' && self.player.setVolume) {
+                self.player.setVolume(0);
+            }
+
+            if (self.type === 'local') {
+                self.$video.muted = true;
+            }
+        }
+    }, {
+        key: 'unmute',
+        value: function unmute() {
+            var self = this;
+            if (!self.player) {
+                return;
+            }
+
+            if (self.type === 'youtube' && self.player.mute) {
+                self.player.unMute();
+            }
+
+            if (self.type === 'vimeo' && self.player.setVolume) {
+                self.player.setVolume(self.options.volume);
+            }
+
+            if (self.type === 'local') {
+                self.$video.muted = false;
+            }
+        }
+    }, {
+        key: 'setVolume',
+        value: function setVolume() {
+            var volume = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
+            var self = this;
+            if (!self.player || !volume) {
+                return;
+            }
+
+            if (self.type === 'youtube' && self.player.setVolume) {
+                self.player.setVolume(volume);
+            }
+
+            if (self.type === 'vimeo' && self.player.setVolume) {
+                self.player.setVolume(volume);
+            }
+
+            if (self.type === 'local') {
+                self.$video.volume = volume / 100;
+            }
+        }
+    }, {
+        key: 'getVolume',
+        value: function getVolume(callback) {
+            var self = this;
+            if (!self.player) {
+                callback(false);
+                return;
+            }
+
+            if (self.type === 'youtube' && self.player.getVolume) {
+                callback(self.player.getVolume());
+            }
+
+            if (self.type === 'vimeo' && self.player.getVolume) {
+                self.player.getVolume().then(function (volume) {
+                    callback(volume);
+                });
+            }
+
+            if (self.type === 'local') {
+                callback(self.$video.volume * 100);
+            }
+        }
+    }, {
+        key: 'getMuted',
+        value: function getMuted(callback) {
+            var self = this;
+            if (!self.player) {
+                callback(null);
+                return;
+            }
+
+            if (self.type === 'youtube' && self.player.isMuted) {
+                callback(self.player.isMuted());
+            }
+
+            if (self.type === 'vimeo' && self.player.getVolume) {
+                self.player.getVolume().then(function (volume) {
+                    callback(!!volume);
+                });
+            }
+
+            if (self.type === 'local') {
+                callback(self.$video.muted);
+            }
+        }
+    }, {
         key: 'getImageURL',
         value: function getImageURL(callback) {
             var self = this;
@@ -7526,21 +8146,29 @@ var VideoWorker = function () {
                 request = null;
             }
         }
+
+        // fallback to the old version.
+
     }, {
         key: 'getIframe',
         value: function getIframe(callback) {
+            this.getVideo(callback);
+        }
+    }, {
+        key: 'getVideo',
+        value: function getVideo(callback) {
             var self = this;
 
-            // return generated iframe
-            if (self.$iframe) {
-                callback(self.$iframe);
+            // return generated video block
+            if (self.$video) {
+                callback(self.$video);
                 return;
             }
 
-            // generate new iframe
+            // generate new video block
             self.onAPIready(function () {
                 var hiddenDiv = void 0;
-                if (!self.$iframe) {
+                if (!self.$video) {
                     hiddenDiv = document.createElement('div');
                     hiddenDiv.style.display = 'none';
                 }
@@ -7558,7 +8186,7 @@ var VideoWorker = function () {
                     };
 
                     // hide controls
-                    if (!self.options.controls) {
+                    if (!self.options.showContols) {
                         self.playerOptions.playerVars.iv_load_policy = 3;
                         self.playerOptions.playerVars.modestbranding = 1;
                         self.playerOptions.playerVars.controls = 0;
@@ -7583,6 +8211,16 @@ var VideoWorker = function () {
                                 self.play(self.options.startTime);
                             }
                             self.fire('ready', e);
+
+                            // volumechange
+                            setInterval(function () {
+                                self.getVolume(function (volume) {
+                                    if (self.options.volume !== volume) {
+                                        self.options.volume = volume;
+                                        self.fire('volumechange', e);
+                                    }
+                                });
+                            }, 150);
                         },
                         onStateChange: function onStateChange(e) {
                             // loop
@@ -7600,29 +8238,30 @@ var VideoWorker = function () {
                                 self.fire('pause', e);
                             }
                             if (e.data === YT.PlayerState.ENDED) {
-                                self.fire('end', e);
+                                self.fire('ended', e);
                             }
 
-                            // check for end of video and play again or stop
-                            if (self.options.endTime) {
-                                if (e.data === YT.PlayerState.PLAYING) {
-                                    ytProgressInterval = setInterval(function () {
-                                        if (self.options.endTime && self.player.getCurrentTime() >= self.options.endTime) {
-                                            if (self.options.loop) {
-                                                self.play(self.options.startTime);
-                                            } else {
-                                                self.pause();
-                                            }
+                            // progress check
+                            if (e.data === YT.PlayerState.PLAYING) {
+                                ytProgressInterval = setInterval(function () {
+                                    self.fire('timeupdate', e);
+
+                                    // check for end of video and play again or stop
+                                    if (self.options.endTime && self.player.getCurrentTime() >= self.options.endTime) {
+                                        if (self.options.loop) {
+                                            self.play(self.options.startTime);
+                                        } else {
+                                            self.pause();
                                         }
-                                    }, 150);
-                                } else {
-                                    clearInterval(ytProgressInterval);
-                                }
+                                    }
+                                }, 150);
+                            } else {
+                                clearInterval(ytProgressInterval);
                             }
                         }
                     };
 
-                    var firstInit = !self.$iframe;
+                    var firstInit = !self.$video;
                     if (firstInit) {
                         var div = document.createElement('div');
                         div.setAttribute('id', self.playerID);
@@ -7631,11 +8270,11 @@ var VideoWorker = function () {
                     }
                     self.player = self.player || new window.YT.Player(self.playerID, self.playerOptions);
                     if (firstInit) {
-                        self.$iframe = document.getElementById(self.playerID);
+                        self.$video = document.getElementById(self.playerID);
 
                         // get video width and height
-                        self.videoWidth = parseInt(self.$iframe.getAttribute('width'), 10) || 1280;
-                        self.videoHeight = parseInt(self.$iframe.getAttribute('height'), 10) || 720;
+                        self.videoWidth = parseInt(self.$video.getAttribute('width'), 10) || 1280;
+                        self.videoHeight = parseInt(self.$video.getAttribute('height'), 10) || 720;
                     }
                 }
 
@@ -7648,7 +8287,7 @@ var VideoWorker = function () {
                     self.playerOptions += '&transparent=0';
 
                     // hide controls
-                    if (!self.options.controls) {
+                    if (!self.options.showContols) {
                         self.playerOptions += '&badge=0&byline=0&portrait=0&title=0';
                     }
 
@@ -7658,16 +8297,16 @@ var VideoWorker = function () {
                     // loop
                     self.playerOptions += '&loop=' + (self.options.loop ? 1 : 0);
 
-                    if (!self.$iframe) {
-                        self.$iframe = document.createElement('iframe');
-                        self.$iframe.setAttribute('id', self.playerID);
-                        self.$iframe.setAttribute('src', 'https://player.vimeo.com/video/' + self.videoID + '?' + self.playerOptions);
-                        self.$iframe.setAttribute('frameborder', '0');
-                        hiddenDiv.appendChild(self.$iframe);
+                    if (!self.$video) {
+                        self.$video = document.createElement('iframe');
+                        self.$video.setAttribute('id', self.playerID);
+                        self.$video.setAttribute('src', 'https://player.vimeo.com/video/' + self.videoID + '?' + self.playerOptions);
+                        self.$video.setAttribute('frameborder', '0');
+                        hiddenDiv.appendChild(self.$video);
                         document.body.appendChild(hiddenDiv);
                     }
 
-                    self.player = self.player || new Vimeo.Player(self.$iframe);
+                    self.player = self.player || new Vimeo.Player(self.$video);
 
                     // get video width and height
                     self.player.getVideoWidth().then(function (width) {
@@ -7693,8 +8332,10 @@ var VideoWorker = function () {
                     self.player.on('timeupdate', function (e) {
                         if (!vmStarted) {
                             self.fire('started', e);
+                            vmStarted = 1;
                         }
-                        vmStarted = 1;
+
+                        self.fire('timeupdate', e);
 
                         // check for end of video and play again or stop
                         if (self.options.endTime) {
@@ -7719,10 +8360,13 @@ var VideoWorker = function () {
                         self.fire('pause', e);
                     });
                     self.player.on('ended', function (e) {
-                        self.fire('end', e);
+                        self.fire('ended', e);
                     });
                     self.player.on('loaded', function (e) {
                         self.fire('ready', e);
+                    });
+                    self.player.on('volumechange', function (e) {
+                        self.fire('volumechange', e);
                     });
                 }
 
@@ -7734,44 +8378,46 @@ var VideoWorker = function () {
                     element.appendChild(source);
                 }
                 if (self.type === 'local') {
-                    if (!self.$iframe) {
-                        self.$iframe = document.createElement('video');
+                    if (!self.$video) {
+                        self.$video = document.createElement('video');
 
                         // mute
                         if (self.options.mute) {
-                            self.$iframe.muted = true;
-                        } else if (self.$iframe.volume) {
-                            self.$iframe.volume = self.options.volume / 100;
+                            self.$video.muted = true;
+                        } else if (self.$video.volume) {
+                            self.$video.volume = self.options.volume / 100;
                         }
 
                         // loop
                         if (self.options.loop) {
-                            self.$iframe.loop = true;
+                            self.$video.loop = true;
                         }
 
                         // autoplay enable on mobile devices
-                        self.$iframe.setAttribute('playsinline', '');
-                        self.$iframe.setAttribute('webkit-playsinline', '');
+                        self.$video.setAttribute('playsinline', '');
+                        self.$video.setAttribute('webkit-playsinline', '');
 
-                        self.$iframe.setAttribute('id', self.playerID);
-                        hiddenDiv.appendChild(self.$iframe);
+                        self.$video.setAttribute('id', self.playerID);
+                        hiddenDiv.appendChild(self.$video);
                         document.body.appendChild(hiddenDiv);
 
                         Object.keys(self.videoID).forEach(function (key) {
-                            addSourceToLocal(self.$iframe, self.videoID[key], 'video/' + key);
+                            addSourceToLocal(self.$video, self.videoID[key], 'video/' + key);
                         });
                     }
 
-                    self.player = self.player || self.$iframe;
+                    self.player = self.player || self.$video;
 
                     var locStarted = void 0;
-                    addEventListener(self.player, 'playing', function (e) {
+                    self.player.addEventListener('playing', function (e) {
                         if (!locStarted) {
                             self.fire('started', e);
                         }
                         locStarted = 1;
                     });
-                    addEventListener(self.player, 'timeupdate', function () {
+                    self.player.addEventListener('timeupdate', function (e) {
+                        self.fire('timeupdate', e);
+
                         // check for end of video and play again or stop
                         if (self.options.endTime) {
                             if (self.options.endTime && this.currentTime >= self.options.endTime) {
@@ -7783,16 +8429,16 @@ var VideoWorker = function () {
                             }
                         }
                     });
-                    addEventListener(self.player, 'play', function (e) {
+                    self.player.addEventListener('play', function (e) {
                         self.fire('play', e);
                     });
-                    addEventListener(self.player, 'pause', function (e) {
+                    self.player.addEventListener('pause', function (e) {
                         self.fire('pause', e);
                     });
-                    addEventListener(self.player, 'ended', function (e) {
-                        self.fire('end', e);
+                    self.player.addEventListener('ended', function (e) {
+                        self.fire('ended', e);
                     });
-                    addEventListener(self.player, 'loadedmetadata', function () {
+                    self.player.addEventListener('loadedmetadata', function () {
                         // get video width and height
                         self.videoWidth = this.videoWidth || 1280;
                         self.videoHeight = this.videoHeight || 720;
@@ -7804,9 +8450,15 @@ var VideoWorker = function () {
                             self.play(self.options.startTime);
                         }
                     });
+                    self.player.addEventListener('volumechange', function (e) {
+                        self.getVolume(function (volume) {
+                            self.options.volume = volume;
+                        });
+                        self.fire('volumechange', e);
+                    });
                 }
 
-                callback(self.$iframe);
+                callback(self.$video);
             });
         }
     }, {
@@ -7868,13 +8520,13 @@ var VideoWorker = function () {
                     // Creates deferred so, other players know when to wait.
                     window.onYouTubeIframeAPIReady = function () {
                         window.onYouTubeIframeAPIReady = null;
-                        loadingYoutubeDeffer.resolve('done');
+                        loadingYoutubeDefer.resolve('done');
                         callback();
                     };
                 } else if ((typeof YT === 'undefined' ? 'undefined' : _typeof(YT)) === 'object' && YT.loaded === 1) {
                     callback();
                 } else {
-                    loadingYoutubeDeffer.done(function () {
+                    loadingYoutubeDefer.done(function () {
                         callback();
                     });
                 }
@@ -7887,14 +8539,14 @@ var VideoWorker = function () {
                     var vimeoInterval = setInterval(function () {
                         if (typeof Vimeo !== 'undefined') {
                             clearInterval(vimeoInterval);
-                            loadingVimeoDeffer.resolve('done');
+                            loadingVimeoDefer.resolve('done');
                             callback();
                         }
                     }, 20);
                 } else if (typeof Vimeo !== 'undefined') {
                     callback();
                 } else {
-                    loadingVimeoDeffer.done(function () {
+                    loadingVimeoDefer.done(function () {
                         callback();
                     });
                 }
@@ -7910,15 +8562,33 @@ var VideoWorker = function () {
     return VideoWorker;
 }();
 
-window.VideoWorker = VideoWorker;
+exports.default = VideoWorker;
 
-/*!
- * Name    : Video Background Extension for Jarallax
- * Version : 1.0.0
- * Author  : nK http://nkdev.info
- * GitHub  : https://github.com/nk-o/jarallax
- */
-(function () {
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = jarallaxVideo;
+
+var _videoWorker = __webpack_require__(3);
+
+var _videoWorker2 = _interopRequireDefault(_videoWorker);
+
+var _global = __webpack_require__(0);
+
+var _global2 = _interopRequireDefault(_global);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function jarallaxVideo() {
+    var jarallax = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _global2.default.jarallax;
+
     if (typeof jarallax === 'undefined') {
         return;
     }
@@ -7932,10 +8602,10 @@ window.VideoWorker = VideoWorker;
 
         defInit.apply(self);
 
-        if (self.video) {
-            self.video.getIframe(function (iframe) {
-                var $parent = iframe.parentNode;
-                self.css(iframe, {
+        if (self.video && !self.options.disableVideo()) {
+            self.video.getVideo(function (video) {
+                var $parent = video.parentNode;
+                self.css(video, {
                     position: self.image.position,
                     top: '0px',
                     left: '0px',
@@ -7948,10 +8618,10 @@ window.VideoWorker = VideoWorker;
                     margin: 0,
                     zIndex: -1
                 });
-                self.$video = iframe;
-                self.image.$container.appendChild(iframe);
+                self.$video = video;
+                self.image.$container.appendChild(video);
 
-                // remove parent iframe element (created by VideoWorker)
+                // remove parent video element (created by VideoWorker)
                 $parent.parentNode.removeChild($parent);
             });
         }
@@ -7962,9 +8632,9 @@ window.VideoWorker = VideoWorker;
     Jarallax.prototype.coverImage = function () {
         var self = this;
         var imageData = defCoverImage.apply(self);
-        var node = self.image.$item.nodeName;
+        var node = self.image.$item ? self.image.$item.nodeName : false;
 
-        if (imageData && self.video && (node === 'IFRAME' || node === 'VIDEO')) {
+        if (imageData && self.video && node && (node === 'IFRAME' || node === 'VIDEO')) {
             var h = imageData.image.height;
             var w = h * self.image.width / self.image.height;
             var ml = (imageData.container.width - w) / 2;
@@ -8021,7 +8691,10 @@ window.VideoWorker = VideoWorker;
             return defaultResult;
         }
 
-        var video = new VideoWorker(self.options.videoSrc, {
+        var video = new _videoWorker2.default(self.options.videoSrc, {
+            autoplay: true,
+            loop: true,
+            showContols: false,
             startTime: self.options.videoStartTime || 0,
             endTime: self.options.videoEndTime || 0,
             mute: self.options.videoVolume ? 0 : 1,
@@ -8120,14 +8793,10 @@ window.VideoWorker = VideoWorker;
 
         defDestroy.apply(self);
     };
+}
 
-    // data-jarallax-video initialization
-    addEventListener(window, 'DOMContentLoaded', function () {
-        jarallax(document.querySelectorAll('[data-jarallax-video]'));
-    });
-})();
-}());
-
+/***/ })
+/******/ ]);
 //==============================================================================
 
 
@@ -8148,6 +8817,246 @@ window.VideoWorker = VideoWorker;
  *
  */
 !function(factory){"function"==typeof define&&define.amd&&define.amd.jQuery?define(["jquery"],factory):factory("undefined"!=typeof module&&module.exports?require("jquery"):jQuery)}(function($){"use strict";function init(options){return!options||void 0!==options.allowPageScroll||void 0===options.swipe&&void 0===options.swipeStatus||(options.allowPageScroll=NONE),void 0!==options.click&&void 0===options.tap&&(options.tap=options.click),options||(options={}),options=$.extend({},$.fn.swipe.defaults,options),this.each(function(){var $this=$(this),plugin=$this.data(PLUGIN_NS);plugin||(plugin=new TouchSwipe(this,options),$this.data(PLUGIN_NS,plugin))})}function TouchSwipe(element,options){function touchStart(jqEvent){if(!(getTouchInProgress()||$(jqEvent.target).closest(options.excludedElements,$element).length>0)){var event=jqEvent.originalEvent?jqEvent.originalEvent:jqEvent;if(!event.pointerType||"mouse"!=event.pointerType||0!=options.fallbackToMouseEvents){var ret,touches=event.touches,evt=touches?touches[0]:event;return phase=PHASE_START,touches?fingerCount=touches.length:options.preventDefaultEvents!==!1&&jqEvent.preventDefault(),distance=0,direction=null,currentDirection=null,pinchDirection=null,duration=0,startTouchesDistance=0,endTouchesDistance=0,pinchZoom=1,pinchDistance=0,maximumsMap=createMaximumsData(),cancelMultiFingerRelease(),createFingerData(0,evt),!touches||fingerCount===options.fingers||options.fingers===ALL_FINGERS||hasPinches()?(startTime=getTimeStamp(),2==fingerCount&&(createFingerData(1,touches[1]),startTouchesDistance=endTouchesDistance=calculateTouchesDistance(fingerData[0].start,fingerData[1].start)),(options.swipeStatus||options.pinchStatus)&&(ret=triggerHandler(event,phase))):ret=!1,ret===!1?(phase=PHASE_CANCEL,triggerHandler(event,phase),ret):(options.hold&&(holdTimeout=setTimeout($.proxy(function(){$element.trigger("hold",[event.target]),options.hold&&(ret=options.hold.call($element,event,event.target))},this),options.longTapThreshold)),setTouchInProgress(!0),null)}}}function touchMove(jqEvent){var event=jqEvent.originalEvent?jqEvent.originalEvent:jqEvent;if(phase!==PHASE_END&&phase!==PHASE_CANCEL&&!inMultiFingerRelease()){var ret,touches=event.touches,evt=touches?touches[0]:event,currentFinger=updateFingerData(evt);if(endTime=getTimeStamp(),touches&&(fingerCount=touches.length),options.hold&&clearTimeout(holdTimeout),phase=PHASE_MOVE,2==fingerCount&&(0==startTouchesDistance?(createFingerData(1,touches[1]),startTouchesDistance=endTouchesDistance=calculateTouchesDistance(fingerData[0].start,fingerData[1].start)):(updateFingerData(touches[1]),endTouchesDistance=calculateTouchesDistance(fingerData[0].end,fingerData[1].end),pinchDirection=calculatePinchDirection(fingerData[0].end,fingerData[1].end)),pinchZoom=calculatePinchZoom(startTouchesDistance,endTouchesDistance),pinchDistance=Math.abs(startTouchesDistance-endTouchesDistance)),fingerCount===options.fingers||options.fingers===ALL_FINGERS||!touches||hasPinches()){if(direction=calculateDirection(currentFinger.start,currentFinger.end),currentDirection=calculateDirection(currentFinger.last,currentFinger.end),validateDefaultEvent(jqEvent,currentDirection),distance=calculateDistance(currentFinger.start,currentFinger.end),duration=calculateDuration(),setMaxDistance(direction,distance),ret=triggerHandler(event,phase),!options.triggerOnTouchEnd||options.triggerOnTouchLeave){var inBounds=!0;if(options.triggerOnTouchLeave){var bounds=getbounds(this);inBounds=isInBounds(currentFinger.end,bounds)}!options.triggerOnTouchEnd&&inBounds?phase=getNextPhase(PHASE_MOVE):options.triggerOnTouchLeave&&!inBounds&&(phase=getNextPhase(PHASE_END)),phase!=PHASE_CANCEL&&phase!=PHASE_END||triggerHandler(event,phase)}}else phase=PHASE_CANCEL,triggerHandler(event,phase);ret===!1&&(phase=PHASE_CANCEL,triggerHandler(event,phase))}}function touchEnd(jqEvent){var event=jqEvent.originalEvent?jqEvent.originalEvent:jqEvent,touches=event.touches;if(touches){if(touches.length&&!inMultiFingerRelease())return startMultiFingerRelease(event),!0;if(touches.length&&inMultiFingerRelease())return!0}return inMultiFingerRelease()&&(fingerCount=fingerCountAtRelease),endTime=getTimeStamp(),duration=calculateDuration(),didSwipeBackToCancel()||!validateSwipeDistance()?(phase=PHASE_CANCEL,triggerHandler(event,phase)):options.triggerOnTouchEnd||options.triggerOnTouchEnd===!1&&phase===PHASE_MOVE?(options.preventDefaultEvents!==!1&&jqEvent.cancelable!==!1&&jqEvent.preventDefault(),phase=PHASE_END,triggerHandler(event,phase)):!options.triggerOnTouchEnd&&hasTap()?(phase=PHASE_END,triggerHandlerForGesture(event,phase,TAP)):phase===PHASE_MOVE&&(phase=PHASE_CANCEL,triggerHandler(event,phase)),setTouchInProgress(!1),null}function touchCancel(){fingerCount=0,endTime=0,startTime=0,startTouchesDistance=0,endTouchesDistance=0,pinchZoom=1,cancelMultiFingerRelease(),setTouchInProgress(!1)}function touchLeave(jqEvent){var event=jqEvent.originalEvent?jqEvent.originalEvent:jqEvent;options.triggerOnTouchLeave&&(phase=getNextPhase(PHASE_END),triggerHandler(event,phase))}function removeListeners(){$element.unbind(START_EV,touchStart),$element.unbind(CANCEL_EV,touchCancel),$element.unbind(MOVE_EV,touchMove),$element.unbind(END_EV,touchEnd),LEAVE_EV&&$element.unbind(LEAVE_EV,touchLeave),setTouchInProgress(!1)}function getNextPhase(currentPhase){var nextPhase=currentPhase,validTime=validateSwipeTime(),validDistance=validateSwipeDistance(),didCancel=didSwipeBackToCancel();return!validTime||didCancel?nextPhase=PHASE_CANCEL:!validDistance||currentPhase!=PHASE_MOVE||options.triggerOnTouchEnd&&!options.triggerOnTouchLeave?!validDistance&&currentPhase==PHASE_END&&options.triggerOnTouchLeave&&(nextPhase=PHASE_CANCEL):nextPhase=PHASE_END,nextPhase}function triggerHandler(event,phase){var ret,touches=event.touches;return(didSwipe()||hasSwipes())&&(ret=triggerHandlerForGesture(event,phase,SWIPE)),(didPinch()||hasPinches())&&ret!==!1&&(ret=triggerHandlerForGesture(event,phase,PINCH)),didDoubleTap()&&ret!==!1?ret=triggerHandlerForGesture(event,phase,DOUBLE_TAP):didLongTap()&&ret!==!1?ret=triggerHandlerForGesture(event,phase,LONG_TAP):didTap()&&ret!==!1&&(ret=triggerHandlerForGesture(event,phase,TAP)),phase===PHASE_CANCEL&&touchCancel(event),phase===PHASE_END&&(touches?touches.length||touchCancel(event):touchCancel(event)),ret}function triggerHandlerForGesture(event,phase,gesture){var ret;if(gesture==SWIPE){if($element.trigger("swipeStatus",[phase,direction||null,distance||0,duration||0,fingerCount,fingerData,currentDirection]),options.swipeStatus&&(ret=options.swipeStatus.call($element,event,phase,direction||null,distance||0,duration||0,fingerCount,fingerData,currentDirection),ret===!1))return!1;if(phase==PHASE_END&&validateSwipe()){if(clearTimeout(singleTapTimeout),clearTimeout(holdTimeout),$element.trigger("swipe",[direction,distance,duration,fingerCount,fingerData,currentDirection]),options.swipe&&(ret=options.swipe.call($element,event,direction,distance,duration,fingerCount,fingerData,currentDirection),ret===!1))return!1;switch(direction){case LEFT:$element.trigger("swipeLeft",[direction,distance,duration,fingerCount,fingerData,currentDirection]),options.swipeLeft&&(ret=options.swipeLeft.call($element,event,direction,distance,duration,fingerCount,fingerData,currentDirection));break;case RIGHT:$element.trigger("swipeRight",[direction,distance,duration,fingerCount,fingerData,currentDirection]),options.swipeRight&&(ret=options.swipeRight.call($element,event,direction,distance,duration,fingerCount,fingerData,currentDirection));break;case UP:$element.trigger("swipeUp",[direction,distance,duration,fingerCount,fingerData,currentDirection]),options.swipeUp&&(ret=options.swipeUp.call($element,event,direction,distance,duration,fingerCount,fingerData,currentDirection));break;case DOWN:$element.trigger("swipeDown",[direction,distance,duration,fingerCount,fingerData,currentDirection]),options.swipeDown&&(ret=options.swipeDown.call($element,event,direction,distance,duration,fingerCount,fingerData,currentDirection))}}}if(gesture==PINCH){if($element.trigger("pinchStatus",[phase,pinchDirection||null,pinchDistance||0,duration||0,fingerCount,pinchZoom,fingerData]),options.pinchStatus&&(ret=options.pinchStatus.call($element,event,phase,pinchDirection||null,pinchDistance||0,duration||0,fingerCount,pinchZoom,fingerData),ret===!1))return!1;if(phase==PHASE_END&&validatePinch())switch(pinchDirection){case IN:$element.trigger("pinchIn",[pinchDirection||null,pinchDistance||0,duration||0,fingerCount,pinchZoom,fingerData]),options.pinchIn&&(ret=options.pinchIn.call($element,event,pinchDirection||null,pinchDistance||0,duration||0,fingerCount,pinchZoom,fingerData));break;case OUT:$element.trigger("pinchOut",[pinchDirection||null,pinchDistance||0,duration||0,fingerCount,pinchZoom,fingerData]),options.pinchOut&&(ret=options.pinchOut.call($element,event,pinchDirection||null,pinchDistance||0,duration||0,fingerCount,pinchZoom,fingerData))}}return gesture==TAP?phase!==PHASE_CANCEL&&phase!==PHASE_END||(clearTimeout(singleTapTimeout),clearTimeout(holdTimeout),hasDoubleTap()&&!inDoubleTap()?(doubleTapStartTime=getTimeStamp(),singleTapTimeout=setTimeout($.proxy(function(){doubleTapStartTime=null,$element.trigger("tap",[event.target]),options.tap&&(ret=options.tap.call($element,event,event.target))},this),options.doubleTapThreshold)):(doubleTapStartTime=null,$element.trigger("tap",[event.target]),options.tap&&(ret=options.tap.call($element,event,event.target)))):gesture==DOUBLE_TAP?phase!==PHASE_CANCEL&&phase!==PHASE_END||(clearTimeout(singleTapTimeout),clearTimeout(holdTimeout),doubleTapStartTime=null,$element.trigger("doubletap",[event.target]),options.doubleTap&&(ret=options.doubleTap.call($element,event,event.target))):gesture==LONG_TAP&&(phase!==PHASE_CANCEL&&phase!==PHASE_END||(clearTimeout(singleTapTimeout),doubleTapStartTime=null,$element.trigger("longtap",[event.target]),options.longTap&&(ret=options.longTap.call($element,event,event.target)))),ret}function validateSwipeDistance(){var valid=!0;return null!==options.threshold&&(valid=distance>=options.threshold),valid}function didSwipeBackToCancel(){var cancelled=!1;return null!==options.cancelThreshold&&null!==direction&&(cancelled=getMaxDistance(direction)-distance>=options.cancelThreshold),cancelled}function validatePinchDistance(){return null===options.pinchThreshold||pinchDistance>=options.pinchThreshold}function validateSwipeTime(){var result;return result=!options.maxTimeThreshold||!(duration>=options.maxTimeThreshold)}function validateDefaultEvent(jqEvent,direction){if(options.preventDefaultEvents!==!1)if(options.allowPageScroll===NONE)jqEvent.preventDefault();else{var auto=options.allowPageScroll===AUTO;switch(direction){case LEFT:(options.swipeLeft&&auto||!auto&&options.allowPageScroll!=HORIZONTAL)&&jqEvent.preventDefault();break;case RIGHT:(options.swipeRight&&auto||!auto&&options.allowPageScroll!=HORIZONTAL)&&jqEvent.preventDefault();break;case UP:(options.swipeUp&&auto||!auto&&options.allowPageScroll!=VERTICAL)&&jqEvent.preventDefault();break;case DOWN:(options.swipeDown&&auto||!auto&&options.allowPageScroll!=VERTICAL)&&jqEvent.preventDefault();break;case NONE:}}}function validatePinch(){var hasCorrectFingerCount=validateFingers(),hasEndPoint=validateEndPoint(),hasCorrectDistance=validatePinchDistance();return hasCorrectFingerCount&&hasEndPoint&&hasCorrectDistance}function hasPinches(){return!!(options.pinchStatus||options.pinchIn||options.pinchOut)}function didPinch(){return!(!validatePinch()||!hasPinches())}function validateSwipe(){var hasValidTime=validateSwipeTime(),hasValidDistance=validateSwipeDistance(),hasCorrectFingerCount=validateFingers(),hasEndPoint=validateEndPoint(),didCancel=didSwipeBackToCancel(),valid=!didCancel&&hasEndPoint&&hasCorrectFingerCount&&hasValidDistance&&hasValidTime;return valid}function hasSwipes(){return!!(options.swipe||options.swipeStatus||options.swipeLeft||options.swipeRight||options.swipeUp||options.swipeDown)}function didSwipe(){return!(!validateSwipe()||!hasSwipes())}function validateFingers(){return fingerCount===options.fingers||options.fingers===ALL_FINGERS||!SUPPORTS_TOUCH}function validateEndPoint(){return 0!==fingerData[0].end.x}function hasTap(){return!!options.tap}function hasDoubleTap(){return!!options.doubleTap}function hasLongTap(){return!!options.longTap}function validateDoubleTap(){if(null==doubleTapStartTime)return!1;var now=getTimeStamp();return hasDoubleTap()&&now-doubleTapStartTime<=options.doubleTapThreshold}function inDoubleTap(){return validateDoubleTap()}function validateTap(){return(1===fingerCount||!SUPPORTS_TOUCH)&&(isNaN(distance)||distance<options.threshold)}function validateLongTap(){return duration>options.longTapThreshold&&distance<DOUBLE_TAP_THRESHOLD}function didTap(){return!(!validateTap()||!hasTap())}function didDoubleTap(){return!(!validateDoubleTap()||!hasDoubleTap())}function didLongTap(){return!(!validateLongTap()||!hasLongTap())}function startMultiFingerRelease(event){previousTouchEndTime=getTimeStamp(),fingerCountAtRelease=event.touches.length+1}function cancelMultiFingerRelease(){previousTouchEndTime=0,fingerCountAtRelease=0}function inMultiFingerRelease(){var withinThreshold=!1;if(previousTouchEndTime){var diff=getTimeStamp()-previousTouchEndTime;diff<=options.fingerReleaseThreshold&&(withinThreshold=!0)}return withinThreshold}function getTouchInProgress(){return!($element.data(PLUGIN_NS+"_intouch")!==!0)}function setTouchInProgress(val){$element&&(val===!0?($element.bind(MOVE_EV,touchMove),$element.bind(END_EV,touchEnd),LEAVE_EV&&$element.bind(LEAVE_EV,touchLeave)):($element.unbind(MOVE_EV,touchMove,!1),$element.unbind(END_EV,touchEnd,!1),LEAVE_EV&&$element.unbind(LEAVE_EV,touchLeave,!1)),$element.data(PLUGIN_NS+"_intouch",val===!0))}function createFingerData(id,evt){var f={start:{x:0,y:0},last:{x:0,y:0},end:{x:0,y:0}};return f.start.x=f.last.x=f.end.x=evt.pageX||evt.clientX,f.start.y=f.last.y=f.end.y=evt.pageY||evt.clientY,fingerData[id]=f,f}function updateFingerData(evt){var id=void 0!==evt.identifier?evt.identifier:0,f=getFingerData(id);return null===f&&(f=createFingerData(id,evt)),f.last.x=f.end.x,f.last.y=f.end.y,f.end.x=evt.pageX||evt.clientX,f.end.y=evt.pageY||evt.clientY,f}function getFingerData(id){return fingerData[id]||null}function setMaxDistance(direction,distance){direction!=NONE&&(distance=Math.max(distance,getMaxDistance(direction)),maximumsMap[direction].distance=distance)}function getMaxDistance(direction){if(maximumsMap[direction])return maximumsMap[direction].distance}function createMaximumsData(){var maxData={};return maxData[LEFT]=createMaximumVO(LEFT),maxData[RIGHT]=createMaximumVO(RIGHT),maxData[UP]=createMaximumVO(UP),maxData[DOWN]=createMaximumVO(DOWN),maxData}function createMaximumVO(dir){return{direction:dir,distance:0}}function calculateDuration(){return endTime-startTime}function calculateTouchesDistance(startPoint,endPoint){var diffX=Math.abs(startPoint.x-endPoint.x),diffY=Math.abs(startPoint.y-endPoint.y);return Math.round(Math.sqrt(diffX*diffX+diffY*diffY))}function calculatePinchZoom(startDistance,endDistance){var percent=endDistance/startDistance*1;return percent.toFixed(2)}function calculatePinchDirection(){return pinchZoom<1?OUT:IN}function calculateDistance(startPoint,endPoint){return Math.round(Math.sqrt(Math.pow(endPoint.x-startPoint.x,2)+Math.pow(endPoint.y-startPoint.y,2)))}function calculateAngle(startPoint,endPoint){var x=startPoint.x-endPoint.x,y=endPoint.y-startPoint.y,r=Math.atan2(y,x),angle=Math.round(180*r/Math.PI);return angle<0&&(angle=360-Math.abs(angle)),angle}function calculateDirection(startPoint,endPoint){if(comparePoints(startPoint,endPoint))return NONE;var angle=calculateAngle(startPoint,endPoint);return angle<=45&&angle>=0?LEFT:angle<=360&&angle>=315?LEFT:angle>=135&&angle<=225?RIGHT:angle>45&&angle<135?DOWN:UP}function getTimeStamp(){var now=new Date;return now.getTime()}function getbounds(el){el=$(el);var offset=el.offset(),bounds={left:offset.left,right:offset.left+el.outerWidth(),top:offset.top,bottom:offset.top+el.outerHeight()};return bounds}function isInBounds(point,bounds){return point.x>bounds.left&&point.x<bounds.right&&point.y>bounds.top&&point.y<bounds.bottom}function comparePoints(pointA,pointB){return pointA.x==pointB.x&&pointA.y==pointB.y}var options=$.extend({},options),useTouchEvents=SUPPORTS_TOUCH||SUPPORTS_POINTER||!options.fallbackToMouseEvents,START_EV=useTouchEvents?SUPPORTS_POINTER?SUPPORTS_POINTER_IE10?"MSPointerDown":"pointerdown":"touchstart":"mousedown",MOVE_EV=useTouchEvents?SUPPORTS_POINTER?SUPPORTS_POINTER_IE10?"MSPointerMove":"pointermove":"touchmove":"mousemove",END_EV=useTouchEvents?SUPPORTS_POINTER?SUPPORTS_POINTER_IE10?"MSPointerUp":"pointerup":"touchend":"mouseup",LEAVE_EV=useTouchEvents?SUPPORTS_POINTER?"mouseleave":null:"mouseleave",CANCEL_EV=SUPPORTS_POINTER?SUPPORTS_POINTER_IE10?"MSPointerCancel":"pointercancel":"touchcancel",distance=0,direction=null,currentDirection=null,duration=0,startTouchesDistance=0,endTouchesDistance=0,pinchZoom=1,pinchDistance=0,pinchDirection=0,maximumsMap=null,$element=$(element),phase="start",fingerCount=0,fingerData={},startTime=0,endTime=0,previousTouchEndTime=0,fingerCountAtRelease=0,doubleTapStartTime=0,singleTapTimeout=null,holdTimeout=null;try{$element.bind(START_EV,touchStart),$element.bind(CANCEL_EV,touchCancel)}catch(e){$.error("events not supported "+START_EV+","+CANCEL_EV+" on jQuery.swipe")}this.enable=function(){return this.disable(),$element.bind(START_EV,touchStart),$element.bind(CANCEL_EV,touchCancel),$element},this.disable=function(){return removeListeners(),$element},this.destroy=function(){removeListeners(),$element.data(PLUGIN_NS,null),$element=null},this.option=function(property,value){if("object"==typeof property)options=$.extend(options,property);else if(void 0!==options[property]){if(void 0===value)return options[property];options[property]=value}else{if(!property)return options;$.error("Option "+property+" does not exist on jQuery.swipe.options")}return null}}var VERSION="1.6.18",LEFT="left",RIGHT="right",UP="up",DOWN="down",IN="in",OUT="out",NONE="none",AUTO="auto",SWIPE="swipe",PINCH="pinch",TAP="tap",DOUBLE_TAP="doubletap",LONG_TAP="longtap",HORIZONTAL="horizontal",VERTICAL="vertical",ALL_FINGERS="all",DOUBLE_TAP_THRESHOLD=10,PHASE_START="start",PHASE_MOVE="move",PHASE_END="end",PHASE_CANCEL="cancel",SUPPORTS_TOUCH="ontouchstart"in window,SUPPORTS_POINTER_IE10=window.navigator.msPointerEnabled&&!window.navigator.pointerEnabled&&!SUPPORTS_TOUCH,SUPPORTS_POINTER=(window.navigator.pointerEnabled||window.navigator.msPointerEnabled)&&!SUPPORTS_TOUCH,PLUGIN_NS="TouchSwipe",defaults={fingers:1,threshold:75,cancelThreshold:null,pinchThreshold:20,maxTimeThreshold:null,fingerReleaseThreshold:250,longTapThreshold:500,doubleTapThreshold:200,swipe:null,swipeLeft:null,swipeRight:null,swipeUp:null,swipeDown:null,swipeStatus:null,pinchIn:null,pinchOut:null,pinchStatus:null,click:null,tap:null,doubleTap:null,longTap:null,hold:null,triggerOnTouchEnd:!0,triggerOnTouchLeave:!1,allowPageScroll:"auto",fallbackToMouseEvents:!0,excludedElements:".noSwipe",preventDefaultEvents:!0};$.fn.swipe=function(method){var $this=$(this),plugin=$this.data(PLUGIN_NS);if(plugin&&"string"==typeof method){if(plugin[method])return plugin[method].apply(plugin,Array.prototype.slice.call(arguments,1));$.error("Method "+method+" does not exist on jQuery.swipe")}else if(plugin&&"object"==typeof method)plugin.option.apply(plugin,arguments);else if(!(plugin||"object"!=typeof method&&method))return init.apply(this,arguments);return $this},$.fn.swipe.version=VERSION,$.fn.swipe.defaults=defaults,$.fn.swipe.phases={PHASE_START:PHASE_START,PHASE_MOVE:PHASE_MOVE,PHASE_END:PHASE_END,PHASE_CANCEL:PHASE_CANCEL},$.fn.swipe.directions={LEFT:LEFT,RIGHT:RIGHT,UP:UP,DOWN:DOWN,IN:IN,OUT:OUT},$.fn.swipe.pageScroll={NONE:NONE,HORIZONTAL:HORIZONTAL,VERTICAL:VERTICAL,AUTO:AUTO},$.fn.swipe.fingers={ONE:1,TWO:2,THREE:3,FOUR:4,FIVE:5,ALL:ALL_FINGERS}});
+//==============================================================================
+
+// Polyfill object-fit/object-position on <img>: IE9, IE10, IE11, Edge, Safari
+// https://github.com/bfred-it/object-fit-images
+//==============================================================================
+/*! npm.im/object-fit-images 3.2.3 */
+var objectFitImages = (function () {
+'use strict';
+
+var OFI = 'bfred-it:object-fit-images';
+var propRegex = /(object-fit|object-position)\s*:\s*([-\w\s%]+)/g;
+var testImg = typeof Image === 'undefined' ? {style: {'object-position': 1}} : new Image();
+var supportsObjectFit = 'object-fit' in testImg.style;
+var supportsObjectPosition = 'object-position' in testImg.style;
+var supportsOFI = 'background-size' in testImg.style;
+var supportsCurrentSrc = typeof testImg.currentSrc === 'string';
+var nativeGetAttribute = testImg.getAttribute;
+var nativeSetAttribute = testImg.setAttribute;
+var autoModeEnabled = false;
+
+function createPlaceholder(w, h) {
+	return ("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='" + w + "' height='" + h + "'%3E%3C/svg%3E");
+}
+
+function polyfillCurrentSrc(el) {
+	if (el.srcset && !supportsCurrentSrc && window.picturefill) {
+		var pf = window.picturefill._;
+		// parse srcset with picturefill where currentSrc isn't available
+		if (!el[pf.ns] || !el[pf.ns].evaled) {
+			// force synchronous srcset parsing
+			pf.fillImg(el, {reselect: true});
+		}
+
+		if (!el[pf.ns].curSrc) {
+			// force picturefill to parse srcset
+			el[pf.ns].supported = false;
+			pf.fillImg(el, {reselect: true});
+		}
+
+		// retrieve parsed currentSrc, if any
+		el.currentSrc = el[pf.ns].curSrc || el.src;
+	}
+}
+
+function getStyle(el) {
+	var style = getComputedStyle(el).fontFamily;
+	var parsed;
+	var props = {};
+	while ((parsed = propRegex.exec(style)) !== null) {
+		props[parsed[1]] = parsed[2];
+	}
+	return props;
+}
+
+function setPlaceholder(img, width, height) {
+	// Default: fill width, no height
+	var placeholder = createPlaceholder(width || 1, height || 0);
+
+	// Only set placeholder if it's different
+	if (nativeGetAttribute.call(img, 'src') !== placeholder) {
+		nativeSetAttribute.call(img, 'src', placeholder);
+	}
+}
+
+function onImageReady(img, callback) {
+	// naturalWidth is only available when the image headers are loaded,
+	// this loop will poll it every 100ms.
+	if (img.naturalWidth) {
+		callback(img);
+	} else {
+		setTimeout(onImageReady, 100, img, callback);
+	}
+}
+
+function fixOne(el) {
+	var style = getStyle(el);
+	var ofi = el[OFI];
+	style['object-fit'] = style['object-fit'] || 'fill'; // default value
+
+	// Avoid running where unnecessary, unless OFI had already done its deed
+	if (!ofi.img) {
+		// fill is the default behavior so no action is necessary
+		if (style['object-fit'] === 'fill') {
+			return;
+		}
+
+		// Where object-fit is supported and object-position isn't (Safari < 10)
+		if (
+			!ofi.skipTest && // unless user wants to apply regardless of browser support
+			supportsObjectFit && // if browser already supports object-fit
+			!style['object-position'] // unless object-position is used
+		) {
+			return;
+		}
+	}
+
+	// keep a clone in memory while resetting the original to a blank
+	if (!ofi.img) {
+		ofi.img = new Image(el.width, el.height);
+		ofi.img.srcset = nativeGetAttribute.call(el, "data-ofi-srcset") || el.srcset;
+		ofi.img.src = nativeGetAttribute.call(el, "data-ofi-src") || el.src;
+
+		// preserve for any future cloneNode calls
+		// https://github.com/bfred-it/object-fit-images/issues/53
+		nativeSetAttribute.call(el, "data-ofi-src", el.src);
+		if (el.srcset) {
+			nativeSetAttribute.call(el, "data-ofi-srcset", el.srcset);
+		}
+
+		setPlaceholder(el, el.naturalWidth || el.width, el.naturalHeight || el.height);
+
+		// remove srcset because it overrides src
+		if (el.srcset) {
+			el.srcset = '';
+		}
+		try {
+			keepSrcUsable(el);
+		} catch (err) {
+			if (window.console) {
+				console.warn('https://bit.ly/ofi-old-browser');
+			}
+		}
+	}
+
+	polyfillCurrentSrc(ofi.img);
+
+	el.style.backgroundImage = "url(\"" + ((ofi.img.currentSrc || ofi.img.src).replace(/"/g, '\\"')) + "\")";
+	el.style.backgroundPosition = style['object-position'] || 'center';
+	el.style.backgroundRepeat = 'no-repeat';
+	el.style.backgroundOrigin = 'content-box';
+
+	if (/scale-down/.test(style['object-fit'])) {
+		onImageReady(ofi.img, function () {
+			if (ofi.img.naturalWidth > el.width || ofi.img.naturalHeight > el.height) {
+				el.style.backgroundSize = 'contain';
+			} else {
+				el.style.backgroundSize = 'auto';
+			}
+		});
+	} else {
+		el.style.backgroundSize = style['object-fit'].replace('none', 'auto').replace('fill', '100% 100%');
+	}
+
+	onImageReady(ofi.img, function (img) {
+		setPlaceholder(el, img.naturalWidth, img.naturalHeight);
+	});
+}
+
+function keepSrcUsable(el) {
+	var descriptors = {
+		get: function get(prop) {
+			return el[OFI].img[prop ? prop : 'src'];
+		},
+		set: function set(value, prop) {
+			el[OFI].img[prop ? prop : 'src'] = value;
+			nativeSetAttribute.call(el, ("data-ofi-" + prop), value); // preserve for any future cloneNode
+			fixOne(el);
+			return value;
+		}
+	};
+	Object.defineProperty(el, 'src', descriptors);
+	Object.defineProperty(el, 'currentSrc', {
+		get: function () { return descriptors.get('currentSrc'); }
+	});
+	Object.defineProperty(el, 'srcset', {
+		get: function () { return descriptors.get('srcset'); },
+		set: function (ss) { return descriptors.set(ss, 'srcset'); }
+	});
+}
+
+function hijackAttributes() {
+	function getOfiImageMaybe(el, name) {
+		return el[OFI] && el[OFI].img && (name === 'src' || name === 'srcset') ? el[OFI].img : el;
+	}
+	if (!supportsObjectPosition) {
+		HTMLImageElement.prototype.getAttribute = function (name) {
+			return nativeGetAttribute.call(getOfiImageMaybe(this, name), name);
+		};
+
+		HTMLImageElement.prototype.setAttribute = function (name, value) {
+			return nativeSetAttribute.call(getOfiImageMaybe(this, name), name, String(value));
+		};
+	}
+}
+
+function fix(imgs, opts) {
+	var startAutoMode = !autoModeEnabled && !imgs;
+	opts = opts || {};
+	imgs = imgs || 'img';
+
+	if ((supportsObjectPosition && !opts.skipTest) || !supportsOFI) {
+		return false;
+	}
+
+	// use imgs as a selector or just select all images
+	if (imgs === 'img') {
+		imgs = document.getElementsByTagName('img');
+	} else if (typeof imgs === 'string') {
+		imgs = document.querySelectorAll(imgs);
+	} else if (!('length' in imgs)) {
+		imgs = [imgs];
+	}
+
+	// apply fix to all
+	for (var i = 0; i < imgs.length; i++) {
+		imgs[i][OFI] = imgs[i][OFI] || {
+			skipTest: opts.skipTest
+		};
+		fixOne(imgs[i]);
+	}
+
+	if (startAutoMode) {
+		document.body.addEventListener('load', function (e) {
+			if (e.target.tagName === 'IMG') {
+				fix(e.target, {
+					skipTest: opts.skipTest
+				});
+			}
+		}, true);
+		autoModeEnabled = true;
+		imgs = 'img'; // reset to a generic selector for watchMQ
+	}
+
+	// if requested, watch media queries for object-fit change
+	if (opts.watchMQ) {
+		window.addEventListener('resize', fix.bind(null, imgs, {
+			skipTest: opts.skipTest
+		}));
+	}
+}
+
+fix.supportsObjectFit = supportsObjectFit;
+fix.supportsObjectPosition = supportsObjectPosition;
+
+hijackAttributes();
+
+return fix;
+
+}());
+
 //==============================================================================
 
 //==============================================================================

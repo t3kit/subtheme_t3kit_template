@@ -1990,6 +1990,23 @@
     }
 }
 
+/*
+  This mixin can be used to set the object-fit:
+  .object-fit(contain);
+*/
+.object-fit(@fit: fill) {
+    -o-object-fit: @fit;
+    object-fit: @fit;
+    font-family: 'object-fit: @{fit}';
+}
+
+.transform(@string) {
+    -webkit-transform: @string;
+    -moz-transform: @string;
+    -ms-transform: @string;
+    -o-transform: @string;
+}
+
 // =====================================================================
 // Add link arrow with circle on pseudo elements before or after =======
 // =====================================================================
@@ -3786,6 +3803,22 @@
     }
 }
 
+.footer .social-icons {
+    .social-icons__item {
+        color: @social-icons-bg-color;
+    }
+}
+
+.no-touch .footer .social-icons__item {
+    &:hover {
+        color: @social-icons-hover-color;
+
+        & > .icons:after {
+            border-color: fade(@social-icons-hover-color, 50%);
+        }
+    }
+}
+
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 
@@ -4460,19 +4493,22 @@
 
 .news-carousel__wrapper {
     padding-bottom: 40px;
+    padding-left: 0;
+    list-style-type: none;
 }
 
 .news-carousel__media-preview {
-    min-height: 180px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
     margin-bottom: 20px;
+
+    img {
+        min-height: 180px;
+    }
 }
 
 .news-carousel__img-wrap {
     position: relative;
 }
+
 //header
 .news-carousel__slide .news-article-header h3 {
     font-size: 18px;
@@ -4531,6 +4567,7 @@
 .news-carousel__btn-next,
 .news-carousel__btn-prev {
     display: none;
+    border: none;
 }
 
 @media (min-width: @screen-md-min) {
@@ -4542,8 +4579,10 @@
 
         color: @main-color;
         -moz-osx-font-smoothing: grayscale;
-        height: auto;
+        height: 100%;
+        top: 0;
         font-size: 30px;
+        padding: 0;
     }
 }
 
@@ -4602,7 +4641,8 @@
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-.news-carousel__img-wrap a:hover:after {
+.news-carousel__img-wrap a:hover:after,
+.news-carousel__img-wrap a:focus:after {
     opacity: 0.7;
     visibility: visible;
 }
@@ -4643,10 +4683,6 @@
 }
 
 .news-cards__media-preview {
-    height: 180px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
     margin-bottom: 20px;
 }
 
@@ -4685,29 +4721,19 @@
     }
 }
 
-.news-simple-list__img-wrap {
-    margin-right: 20px;
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-
-    &:after {
-        content: '';
-        display: block;
-        margin-bottom: 69.2%;
-    }
+.news-simple-list__item {
+    background-color: #f2f2f2;
+    margin-bottom: 30px;
 }
 
-.news-simple-list__img-wrap a {
-    position: absolute;
+.news-simple-list__img-wrap {
+    margin-right: 20px;
     width: 100%;
-    height: 100%;
 }
 
 .news-simple-list__media-preview {
     width: 100%;
     height: 100%;
-    position: absolute;
 }
 
 .news-simple-list__text {
@@ -4715,17 +4741,6 @@
     position: relative;
     padding: 15px 15px 0;
     height: auto;
-}
-
-.news-simple-list__item {
-    background-color: darken(@main-body-bg, 5%);
-    margin-bottom: 30px;
-}
-
-.news-simple-list__media-preview {
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
 }
 
 .news-simple-list__more-link {
@@ -4740,6 +4755,7 @@
     .news-simple-list__img-wrap {
         float: left;
         width: 290px;
+        height: 200px;
     }
 
     .news-simple-list__text {
@@ -4755,10 +4771,6 @@
 }
 
 @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
-    .news-simple-list__more-link {
-        padding-top: 4px;
-    }
-
     .news-simple-list__header h3 {
         font-size: 19px;
     }
@@ -4871,9 +4883,7 @@
 
 .news-timeline__media-preview {
     height: 250px;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .news-timeline__item-text {
@@ -6881,6 +6891,14 @@ div.awesomplete li[aria-selected="true"] mark {
     background: @carousel-control-color;
 }
 
+._light-transparent-bg .img-slider__caption {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+._dark-transparent-bg .img-slider__caption {
+    background: rgba(0, 0, 0, 0.3);
+}
+
 @media (min-width: @screen-sm-min) {
     .img-slider__caption {
         padding: 30px 50px;
@@ -6981,6 +6999,7 @@ div.awesomplete li[aria-selected="true"] mark {
     padding: 10px 30px;
 }
 
+.logo-carousel__img-wrp,
 .logo-carousel__link {
     height: 100%;
 
@@ -7081,16 +7100,6 @@ div.awesomplete li[aria-selected="true"] mark {
     }
 }
 
-.no-touch .footer .social-icons__item {
-    &:hover {
-        color: @social-icons-hover-color;
-
-        & > .icons:after {
-            border-color: fade(@social-icons-hover-color, 50%);
-        }
-    }
-}
-
 @media (min-width: @screen-sm-min) {
     .social-icons__item {
         margin: 0 8px 0 0;
@@ -7122,12 +7131,6 @@ div.awesomplete li[aria-selected="true"] mark {
     background-position: 50% 50%;
     max-width: 1920px;
     margin: 0 auto;
-}
-
-@media (min-width: @screen-xs-min) {
-    .no-touch.nonIE .parallax-video {
-        background-image: none !important;
-    }
 }
 
 .slider-container {
@@ -8491,6 +8494,9 @@ div.awesomplete li[aria-selected="true"] mark {
     border: 1px solid shade(@sub-navigation-border, 5%);
     border-width: 0 0 1px;
     font-size: 15px;
+    hyphens: auto;
+    // ie11 and edge hyphens polyfill
+    word-wrap: break-word;
 }
 
 @media (min-width: @screen-lg-min) {
@@ -9017,6 +9023,23 @@ h2 {
 
 .btn-bordered--inverted {
     .btn-style--t3kit(@btn-default-color, transparent, @btn-default-color);
+}
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+
+// ============================
+// ======== Object fit styles  ====
+// ============================
+.object-fit {
+    .object-fit(cover);
+    .transform(none);
+
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 
