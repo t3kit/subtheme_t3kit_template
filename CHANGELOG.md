@@ -1,4 +1,9 @@
 
+#### v1.6.0 `July 2, 2018`
+- **[TASK]** update dependencies, theme-t3kit v2.8.0 ([ee9b763](https://github.com/t3kit/subtheme_t3kit_template/commit/ee9b763))
+
+***
+
 #### v1.5.0 `May 24, 2018`
 - **[TASK]** update dependencies, theme-t3kit v2.7.0 ([ebcd2d5](https://github.com/t3kit/subtheme_t3kit_template/commit/ebcd2d5))
 - **[TASK]** update npm devDependencies ([e360a44](https://github.com/t3kit/subtheme_t3kit_template/commit/e360a44))
