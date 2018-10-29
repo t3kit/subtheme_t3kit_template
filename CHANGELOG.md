@@ -1,4 +1,11 @@
 
+#### v1.7.0 `October 29, 2018`
+- **[TASK]** update dependencies, theme-t3kit v2.9.0 ([93d0387](https://github.com/t3kit/subtheme_t3kit_template/commit/93d0387))
+- **[TASK]** register icons outside BE if-statement so it can show content element icons in frontend editing ([0e84719](https://github.com/t3kit/subtheme_t3kit_template/commit/0e84719))
+- **[TASK]** add option to modify CKeditor styles/headers (#9) ([fc1fd91](https://github.com/t3kit/subtheme_t3kit_template/commit/fc1fd91))
+
+***
+
 #### v1.6.0 `July 2, 2018`
 - **[TASK]** update dependencies, theme-t3kit v2.8.0 ([ee9b763](https://github.com/t3kit/subtheme_t3kit_template/commit/ee9b763))
 
