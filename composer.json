@@ -29,6 +29,6 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "t3kit/theme-t3kit": "~2.9.0"
+    "t3kit/theme-t3kit": "~2.10.0-alpha"
   }
 }
