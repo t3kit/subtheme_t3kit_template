@@ -5,13 +5,13 @@ $EM_CONF[$_EXTKEY] = array(
     'description' => 'TBD',
     'category' => 'templates',
     'shy' => 0,
-    'version' => '1.7.0',
+    'version' => '1.8.0-beta',
     'dependencies' => '',
     'conflicts' => '',
     'priority' => '',
     'loadOrder' => '',
     'module' => '',
-    'state' => 'stable',
+    'state' => 'beta',
     'uploadfolder' => 0,
     'createDirs' => '',
     'modify_tables' => '',
@@ -24,7 +24,7 @@ $EM_CONF[$_EXTKEY] = array(
     'CGLcompliance_note' => '',
     'constraints' => array(
         'depends' => array(
-            'theme_t3kit' => '2.10.0-2.10.99'
+            'theme_t3kit' => '2.9.0-2.10.99'
         ),
         'conflicts' => array(
         ),
