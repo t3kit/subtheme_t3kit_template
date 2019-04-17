@@ -2448,12 +2448,10 @@
     list-style-type: none;
     padding: 0;
     position: absolute;
-    width: 100%;
-    right: 0;
-    left: auto;
     top: 0;
     background: @header-top-bg-color;
-    // background-color: @header-info-background;
+    left: 0;
+    right: 0;
     z-index: 4000;
     text-align: right;
     padding-right: 50px;
@@ -2461,6 +2459,16 @@
     visibility: hidden;
     transition: opacity 0.3s 0s, visibility 0s 0.3s;
     border-bottom: 1px solid @border-color;
+
+    @media (min-width: @screen-md-min) {
+        left: calc(~"(100% - 970px) / 2");
+        right: calc(~"(100% - 970px) / 2");
+    }
+
+    @media (min-width: @screen-lg-min) {
+        left: calc(~"(100% - 1170px) / 2");
+        right: calc(~"(100% - 1170px) / 2");
+    }
 }
 
 .header-top__language-menu-box-close-btn:after,
@@ -2659,7 +2667,7 @@
 @media (min-width: @screen-sm-min) {
     .header-middle__logo {
         float: left;
-        width: 40%;
+        width: auto;
         text-align: left;
     }
 
@@ -2703,7 +2711,6 @@
 }
 
 .main-navigation .header-top__language-menu-box {
-    width: 100%;
     height: 100%;
     background-color: @nav-background-color;
 }
@@ -2927,12 +2934,14 @@
     transform: rotate(90deg);
 }
 
-._open-mobile-dropdown > .main-navigation__open-sub-menu-link:before {
+._open-mobile-dropdown > .main-navigation__open-sub-menu-link:before,
+._open-mobile-dropdown > .tablet-arrow > .main-navigation__open-sub-menu-link:before {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
-._open-mobile-dropdown > .main-navigation__open-sub-menu-link:after {
+._open-mobile-dropdown > .main-navigation__open-sub-menu-link:after,
+._open-mobile-dropdown > .tablet-arrow > .main-navigation__open-sub-menu-link:after {
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
 }
@@ -2967,7 +2976,6 @@
     transform: scale(1, 0);
     transition: -webkit-transform 0.2s linear, opacity 0.2s linear, visibility 0.2s linear, max-height 0.2s linear;
     transition: transform 0.2s linear, opacity 0.2s linear, visibility 0.2s linear, max-height 0.2s linear;
-    z-index: 3000;
 }
 
 @media (max-width: @screen-sm-max) {
@@ -3164,6 +3172,7 @@
         opacity: 1;
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
+        z-index: 3000;
     }
 
     .touch .main-navigation__item._sub .main-navigation__open-sub-menu-link:before {
@@ -3207,6 +3216,21 @@
 }
 // =================================
 // Search
+
+// .tx-solr-searchbox contains .main-navigation__search-btn and .main-navigation__search-box
+// by setting it to relative position, the search-field can now float (responsive)
+.header-top-wrp .tx-solr-searchbox,
+.main-navigation .tx-solr-searchbox {
+    position: relative;
+    float: right;
+}
+
+@media (max-width: @screen-sm-max) {
+    // removes relative position to make header-top searchbox full width
+    .header-top-wrp .tx-solr-searchbox {
+        position: initial;
+    }
+}
 
 .main-navigation__search-btn-wrp {
     display: none;
@@ -3408,33 +3432,22 @@
 .main-navigation__search-box {
     position: relative;
     height: @nav-height;
-    width: 100%;
-    top: 0;
+    width: 100vw;
+    bottom: 0;
     left: auto;
     right: 0;
     z-index: 3000;
 }
 
-@media (min-width: @screen-sm-min) {
-    .main-navigation__search-box {
-        // width: 50%;
-    }
-}
-
 @media (min-width: @screen-md-min) {
+    // search-box in both header-top and main-navigation
     .main-navigation__search-box {
-        width: 46%;
+        width: 450px;
         position: absolute;
         right: 60px;
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.3s 0s, visibility 0s 0.3s;
-    }
-}
-
-@media (min-width: @screen-lg-min) {
-    .main-navigation__search-box {
-        width: 36%;
     }
 }
 
@@ -3965,6 +3978,12 @@
     clear: both;
 }
 
+.news iframe,
+.news video {
+    border: 0;
+    display: block;
+}
+
 .news .nav ul {
     float: left;
     display: inline;
@@ -4148,7 +4167,6 @@
         &__prev,
         &__next {
             width: 50%;
-            float: left;
             position: relative;
 
             &:before,
@@ -4159,6 +4177,7 @@
         }
 
         &__next {
+            float: right;
             text-align: right;
             padding: 0 25px 0 15px;
 
@@ -4170,6 +4189,7 @@
         }
 
         &__prev {
+            float: left;
             padding: 0 15px 0 25px;
 
             .link-arrow--circle();
@@ -4503,7 +4523,9 @@
 .news-carousel__media-preview {
     margin-bottom: 20px;
 
-    img {
+    img,
+    iframe,
+    video {
         min-height: 180px;
     }
 }
@@ -7162,6 +7184,16 @@ div.awesomplete li[aria-selected="true"] mark {
         & > .icons:after {
             border-color: fade(@social-icons-hover-color, 50%);
         }
+
+        // ie11 and edge fix for underline on icon - text-decoration has to be styled before it can be unstyled
+        & > .icons:before when not (@link-hover-decoration = none) {
+            text-decoration: @link-hover-decoration;
+        }
+
+        & > .icons:before when not (@link-hover-decoration = none) {
+            text-decoration: none;
+        }
+        // end fix
     }
 }
 
@@ -7181,7 +7213,7 @@ div.awesomplete li[aria-selected="true"] mark {
 @media (min-width: @screen-sm-min) {
     .header-middle__social-icon .social-icons {
         float: right;
-        width: 60%;
+        width: auto;
         text-align: right;
         padding: 0 10px 0 0;
         height: @header-middle-height;
